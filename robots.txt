@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ShreyansJain04.github.io/sitemap.xml
+Sitemap: https://ShreyansJain04.github.io/My-folio/sitemap.xml
