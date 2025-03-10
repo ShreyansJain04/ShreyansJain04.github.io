@@ -1,11 +1,19 @@
+
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: "Visualisations for Machine Learning"
+description: "Interactive tools and visualizations to simplify complex machine learning concepts."
+img: assets/img/ml_visualizations.jpg
+importance: 4
+category: work
+project_link: "https://intensedrop.notion.site/Visualizations-for-ML-951994a20ee447268626a82e4659c41f"
 ---
+
+**Advisor:** Prof. Nipun Batra, Sustainability Lab, IIT GN
+
+- Collaborated with a team to develop more than 50 interactive educational tools for machine learning.
+- Built interactive blogs and Streamlit applications covering topics such as optimization, Markov chains, and information theory.
+- Aimed at demystifying complex mathematical concepts behind ML.
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.

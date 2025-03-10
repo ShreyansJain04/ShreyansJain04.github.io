@@ -1,11 +1,16 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: "Variational Autoencoder on FPGA"
+description: "A 16-bit fixed-point quantized VAE for processing MNIST on a Nexys 4 FPGA with near-instantaneous inference."
+img: assets/img/fpga_vae.jpg
+importance: 5
+category: work
+project_link: "https://github.com/ShreyansJain04/DigitalSystemsVAE"
 ---
+
+**Course Project** – Mentor: Prof. Joycee Mekie, IIT Gandhinagar
+
+- Designed and implemented a fixed-point
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.

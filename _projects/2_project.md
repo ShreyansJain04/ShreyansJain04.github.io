@@ -1,11 +1,18 @@
+
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: "Streak Artifact Suppression in High-Intensity Focused Ultrasound and Histotripsy Images"
+description: "Fourier-attention U-Net to suppress streak artifacts in ultrasound images."
+img: assets/img/ultrasound_streak.jpg
 importance: 2
 category: work
 ---
+
+**Research Project** – MUSE Lab, IIT Gandhinagar under Prof. Himanshu Shekhar
+
+- Developed a Fourier-attention U-Net architecture to suppress streak artifacts in B-mode ultrasound images.
+- Implemented synthetic streak generation during training to enhance model robustness.
+- Increased Signal-to-Noise Ratio (SNR) by 20 dB and achieved an IoU of 0.698 across 154 test cases.
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.

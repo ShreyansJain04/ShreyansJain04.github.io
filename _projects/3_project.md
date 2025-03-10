@@ -1,12 +1,17 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: "Reconstruction of Ultrasound Super-Resolution Images"
+description: "Hybrid Attention-Based U-Net for enhancing Ultrasound Localization Microscopy with sparse data."
+img: assets/img/ultrasound_superres.jpg
 importance: 3
 category: work
 ---
+
+**Research Project** – MUSE Lab, IIT Gandhinagar under Prof. Himanshu Shekhar
+
+- Developed a Hybrid Attention-Based U-Net to accurately track microbubbles in noisy image sequences.
+- Reduced data requirements for Ultrasound Localization Microscopy by 40× using sparse data.
+- Achieved a peak SNR enhancement of 14.73 dB, capturing detailed vascular features.
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
