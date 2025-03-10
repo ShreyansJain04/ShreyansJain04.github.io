@@ -7,8 +7,7 @@ nav: true
 nav_order: 1
 ---
 
-# Publications
-
+<!-- 
 ## Conference Papers
 
 - **Variational Diffusion Unlearning: A Variational Inference Framework for Unlearning in Diffusion Models** (2024)  
@@ -20,6 +19,8 @@ nav_order: 1
   **Shreyans Jain**\*, Viraj Vekaria\*, Karan Gandhi\*, Aadya Arora\*  
   *Accepted at ICVGIP 2024*  
   [Paper](https://doi.org/10.48550/arXiv.2411.05747)
+
+## Conference Presentations
 
 - **Suppressing Streak Artifacts in Ultrasound Images during Therapy Guidance by a Hybrid U-Net and Enhanced Masked Autoencoder** (2024)  
   **Shreyans Jain**, Mihir A., Ruchika M., Nishita M., Himanshu S.  
@@ -37,7 +38,7 @@ nav_order: 1
 
 <div class="publications">
 {% bibliography -f {{ site.scholar.bibliography }} %}
-</div>
+</div> -->
 
 <style>
   /* Custom styling for publications */
