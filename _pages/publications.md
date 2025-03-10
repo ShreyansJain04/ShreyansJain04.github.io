@@ -7,7 +7,7 @@ nav: true
 nav_order: 1
 ---
 
-<!-- 
+
 ## Conference Papers
 
 - **Variational Diffusion Unlearning: A Variational Inference Framework for Unlearning in Diffusion Models** (2024)  
@@ -36,29 +36,4 @@ nav_order: 1
   Ruchika Dhawan, Mihir Agarwal\*, **Shreyans Jain**\*, Hrriday Ruparel\*, Himanshu Shekhar  
   *Accepted at Conference International Society for Therapeutic Ultrasound, Taipei 2024*
 
-<div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} %}
-</div> -->
 
-<style>
-  /* Custom styling for publications */
-  ul {
-    padding-left: 0;
-    list-style-type: none;
-  }
-  
-  .publications li {
-    margin-bottom: 1.5em;
-  }
-  
-  /* Style for author names */
-  strong {
-    color: #1560BD;
-  }
-  
-  /* Style for paper titles */
-  h2 {
-    color: #1560BD;
-    margin-top: 2em;
-  }
-</style>
