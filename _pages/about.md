@@ -26,8 +26,8 @@ My work has earned recognition such as a Silver Medal at the Inter IIT Tech Meet
 
 **Connect with Me:**
 - **Email:** [shreyans.jain@iitgn.ac.in](mailto:shreyans.jain@iitgn.ac.in)
-- **LinkedIn:** [Shreyans Jain](https://www.linkedin.com/in/shreyans-jain-1b56aa247/i)
-- **GitHub:** [shreyansjain04](https://www.github.com/shreyansjain04)
+- **LinkedIn:** [Shreyans Jain](https://www.linkedin.com/in/shreyans-jain-1b56aa247/)
+- **GitHub:** [shreyansjain04](https://github.com/shreyansjain04)
 
 
 
