@@ -10,7 +10,7 @@ category: work
 **Research Project** – MUSE Lab, IIT Gandhinagar under Prof. Himanshu Shekhar
 
 - Developed a Hybrid Attention-Based U-Net to accurately track microbubbles in noisy image sequences.
-- Reduced data requirements for Ultrasound Localization Microscopy by 40× using sparse data.
+- Reduced data requirements for Ultrasound Localization Microscopy (ULM) by 40× using sparse data.
 - Achieved a peak SNR enhancement of 14.73 dB, capturing detailed vascular features.
 
 Every project has a beautiful feature showcase page.
