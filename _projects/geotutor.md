@@ -5,6 +5,9 @@ description: "Adaptive GIS tutor: BM25 + dense retrieval + cross-encoder reranki
 img: assets/img/projects/geotutor/thumb.jpg
 importance: 5
 category: Research
+period: "May 2025 – Jul 2025"
+advisor: "Prof. Dharmendra Saraswat & Prof. Vaneet Aggarwal, Purdue University"
+status: "Research internship · Purdue"
 links:
   code: https://github.com/ShreyansJain04/GISLLM
 tags: [LLM, RAG, education, GIS, tutoring-system, FastAPI]

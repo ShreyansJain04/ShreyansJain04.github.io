@@ -36,6 +36,22 @@ My research has been with the [MUSE Lab](https://labs.iitgn.ac.in/muselaboratory
   <span>Generative models &amp; unlearning</span><span>Image restoration</span><span>Retrieval-augmented generation</span>
 </div>
 
+**Experience at a glance**
+- **Purdue University**, Research Intern (2025): LLM tutoring system for GIS education
+- **IISc Bangalore**, Research Intern (2024): machine unlearning for diffusion models
+- **MUSE Lab, IIT Gandhinagar** (2023–25): deep learning for therapeutic ultrasound imaging
+- **KrishiMandir**, AI Engineer (2023–24): few-shot product image classification
+
+[Full experience →](/experience/)
+
+**Education**
+<table class="edu-table">
+  <tr><th>Degree</th><th>Institute</th><th>Years</th><th>Score</th></tr>
+  <tr><td>B.Tech, Electrical Engineering</td><td>IIT Gandhinagar</td><td>2022 – present</td><td>CPI 8.74 / 10</td></tr>
+  <tr><td>Class XII (PCM)</td><td>Maa Bharti Sr. Sec. School</td><td>2021 – 2022</td><td>96%</td></tr>
+  <tr><td>Class X</td><td>FIITJEE World School, Secunderabad</td><td>2019 – 2020</td><td>10 / 10</td></tr>
+</table>
+
 **Featured work**: [GeoNLI](/projects/geonli/) (Inter-IIT 14.0, ISRO) · [AI-generated image detection](/projects/ai-image-detection/) (Inter-IIT 13.0, Adobe) · [BubbleSeg](/projects/bubbleseg/) · [Real-time streak suppression](/projects/streak-suppression/). Browse [all projects](/projects/) or read the [write-ups](/blog/).
 
 I'm looking for **research positions and graduate opportunities** in computer vision and medical imaging. Feel free to [email me](mailto:shreyans.jain@iitgn.ac.in).

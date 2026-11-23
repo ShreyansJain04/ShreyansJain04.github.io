@@ -9,8 +9,10 @@ layout: default
             <p class="post-description">{{ page.description }}</p>
             {%- if page.collection == "projects" %}
             <div class="project-meta">
+              {%- if page.status %}<span class="status-pill">{{ page.status }}</span>{% endif %}
               {%- if page.award %}<span class="badge-award"><i class="fas fa-trophy"></i> {{ page.award }}</span>{% endif %}
               {%- if page.period %}<span class="meta-item"><i class="far fa-calendar"></i> {{ page.period }}</span>{% endif %}
+              {%- if page.advisor %}<span class="meta-item"><i class="fas fa-chalkboard-teacher"></i> {{ page.advisor }}</span>{% endif %}
               {%- if page.team %}<span class="meta-item"><i class="fas fa-users"></i> {{ page.team }}</span>{% endif %}
             </div>
             {%- if page.links %}

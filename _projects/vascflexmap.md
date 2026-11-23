@@ -5,6 +5,8 @@ description: "Transformer-decoder maps microvessels from 2-50 FPS contrast ultra
 img: assets/img/projects/ulm-super-resolution/thumb.jpg
 importance: 3
 category: Research
+advisor: "Prof. Himanshu Shekhar, MUSE Lab, IITGN"
+status: "Manuscript · ISTU 2024"
 period: "2024 - 2025"
 team: "Ruchika Dhawan, Mihir Agarwal, Shreyans Jain, Himanshu Shekhar"
 tags: [ultrasound, super-resolution, ULM, transformer, microvasculature, sparse-data]

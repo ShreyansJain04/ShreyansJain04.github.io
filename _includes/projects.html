@@ -13,6 +13,7 @@
         </div>
         {%- endif %}
         <div class="card-body">
+          {%- if project.status %}<span class="status-pill">{{ project.status }}</span>{% endif %}
           {%- if project.award %}<span class="badge-award small"><i class="fas fa-trophy"></i> {{ project.award }}</span>{% endif %}
           <h2 class="card-title">{{ project.title }}</h2>
           <p class="card-text">{{ project.description }}</p>

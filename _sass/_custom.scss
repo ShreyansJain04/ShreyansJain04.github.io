@@ -59,3 +59,32 @@ html[data-theme='dark'] .badge-award { color: #ffcf5c; }
   span { font-size: .82rem; padding: .2rem .65rem; border-radius: 999px; border: 1px solid var(--global-divider-color); }
 }
 figure figcaption.caption { font-size: .85rem; color: var(--global-text-color-light); text-align: center; margin-top: .4rem; }
+
+// ---------- demo gallery ----------
+.demo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .9rem; margin: 1rem 0 1.5rem; }
+.demo-card {
+  display: block; border: 1px solid var(--global-divider-color); border-radius: 10px; overflow: hidden;
+  color: var(--global-text-color) !important; transition: transform .15s ease, box-shadow .15s ease;
+  &:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,.18); text-decoration: none; }
+  .demo-img { aspect-ratio: 4 / 3; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;
+    img { max-width: 100%; max-height: 100%; object-fit: contain; } }
+  .demo-title { font-size: .85rem; font-weight: 500; padding: .55rem .7rem;
+    i { font-size: .65rem; opacity: .6; margin-left: .2rem; } }
+}
+
+// ---------- status pill & advisor ----------
+.status-pill { display: inline-block; font-size: .72rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px;
+  background: rgba(59,130,246,.14); color: #2563eb; border: 1px solid rgba(59,130,246,.4); }
+html[data-theme='dark'] .status-pill { color: #93c5fd; }
+
+// ---------- experience page ----------
+.xp-item { border-left: 3px solid var(--global-theme-color); padding: .1rem 0 .2rem 1rem; margin: 0 0 1.5rem;
+  .xp-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; align-items: baseline; }
+  .xp-role { font-weight: 600; font-size: 1.05rem; }
+  .xp-date { font-size: .85rem; color: var(--global-text-color-light); white-space: nowrap; }
+  .xp-org { font-size: .9rem; color: var(--global-text-color-light); margin-bottom: .35rem; }
+  ul { margin-bottom: .35rem; padding-left: 1.1rem; } li { margin-bottom: .2rem; }
+  .project-links { margin: .25rem 0 0; }
+}
+.edu-table { width: 100%; font-size: .9rem; margin: .5rem 0 1.25rem;
+  th, td { padding: .4rem .5rem; border-bottom: 1px solid var(--global-divider-color); } th { font-weight: 600; } }

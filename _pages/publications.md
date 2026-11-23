@@ -4,7 +4,7 @@ permalink: /publications/
 title: publications
 description: Papers and conference presentations. * denotes equal contribution.
 nav: true
-nav_order: 2
+nav_order: 3
 years: [2025, 2024]
 ---
 <!-- _pages/publications.md -->

@@ -5,6 +5,8 @@ description: "EfficientNet-B0 U-Net with Dice-Focal loss segments histotripsy ab
 img: assets/img/projects/bubbleseg/thumb.jpg
 importance: 1
 category: Research
+advisor: "Prof. Himanshu Shekhar (IITGN) & Prof. Kenneth B. Bader (UChicago)"
+status: "Manuscript"
 team: "Shreyans Jain, Soham Gaonkar, Aditya Borate, Ruchika Dhawan, Kenneth B. Bader, Himanshu Shekhar"
 links:
   code: https://github.com/ShreyansJain04/BubbleSegmentation

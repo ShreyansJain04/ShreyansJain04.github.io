@@ -5,7 +5,9 @@ description: "Two-stage U-Net + Fourier-attention pipeline removes streak artifa
 img: assets/img/projects/streak-suppression/thumb.jpg
 importance: 2
 category: Research
-period: "Dec 2023 - Jul 2024"
+advisor: "Prof. Himanshu Shekhar, MUSE Lab, IITGN"
+status: "IEEE SAUS 2024 · ISTU 2024"
+period: "Dec 2023 – Jul 2024"
 team: "Shreyans Jain, Mihir Agarwal, Ruchika Dhawan, Nishita Mistry, Himanshu Shekhar"
 links:
   code: https://github.com/agarwal-mihir/Fourier-StreakNet

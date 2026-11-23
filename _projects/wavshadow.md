@@ -5,7 +5,9 @@ description: "ShadowFormer + MAE priors, FFC blocks, Haar wavelets and a SAM Ada
 img: assets/img/projects/wavshadow/thumb.jpg
 importance: 4
 category: Research
-period: "2024"
+advisor: "Prof. Shanmuganathan Raman, IITGN"
+status: "ICVGIP 2024"
+period: "Feb 2024 – Nov 2024"
 team: "Shreyans Jain, Viraj Vekaria, Karan Gandhi, Aadya Arora (equal contribution)"
 links:
   paper: https://arxiv.org/abs/2411.05747
@@ -38,7 +40,10 @@ Experiments are on DESOBA, a challenging shadow dataset. The qualitative panel s
 
 {% include figure.html path="assets/img/projects/wavshadow/results.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Qualitative results on DESOBA: shadowed input, ground-truth mask, our mask, ground-truth de-shadowed image, our de-shadowed image." %}
 
-Whole-image results from the paper (SF = ShadowFormer backbone; higher PSNR/SSIM and lower RMSE are better):
+**Segmentation:** the SAM backbone with wavelet features reaches a balanced error rate (BER) of **1.38 on ISTD**, which is state of the art.  
+**Removal:** **36.7 PSNR on DESOBA**, +0.7 PSNR over the 2023 state of the art.
+
+Whole-image removal results from the paper (SF = ShadowFormer backbone; higher PSNR/SSIM and lower RMSE are better):
 
 | Method | Dataset | PSNR ↑ | SSIM ↑ | RMSE ↓ |
 |---|---|---|---|---|
