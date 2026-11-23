@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Competition wins, research and things I have built. Inter-IIT Tech Meet projects first.  Click a card for the full story.
+description: Side and course projects in ML systems, data and hardware. Research and competition work have their own pages.
 nav: true
-nav_order: 1
-display_categories: ["Inter-IIT Tech Meet", "Research", "ML & Data Projects", "Hardware & Embedded"]
+nav_order: 4
+display_categories: ["ML & Data Projects", "Hardware & Embedded"]
 horizontal: false
 ---
 

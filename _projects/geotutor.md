@@ -3,14 +3,18 @@ layout: page
 title: "GeoTutor: An AI Tutoring System for GIS Education with Hybrid RAG"
 description: "Adaptive GIS tutor: BM25 + dense retrieval + cross-encoder reranking, citations on every answer, SM-2 spaced repetition."
 img: assets/img/projects/geotutor/thumb.jpg
-importance: 5
-category: Research
+importance: "6"
+category: "Research"
 period: "May 2025 – Jul 2025"
 advisor: "Prof. Dharmendra Saraswat & Prof. Vaneet Aggarwal, Purdue University"
 status: "Research internship · Purdue"
 links:
   code: https://github.com/ShreyansJain04/GISLLM
 tags: [LLM, RAG, education, GIS, tutoring-system, FastAPI]
+highlights:
+  - "Intelligent tutoring system for GIS education on a hybrid RAG pipeline: BM25 + dense FAISS retrieval + cross-encoder reranking, with citations on every answer."
+  - "Adaptive teaching engine with a learner-memory model: personalized plans, misconception detection, SuperMemo-2 spaced repetition."
+  - "FastAPI + Pydantic backend integrated with a React frontend; journal manuscript in preparation with Purdue faculty."
 ---
 <!-- TODO: verify (1) the manuscript is an unfinished draft (author/abstract placeholders, target journal "Computers and Education: Artificial Intelligence" only in the template header); no submission status stated, so no venue is claimed here. (2) No evaluation numbers exist in the draft. (3) Team/period unknown. -->
 

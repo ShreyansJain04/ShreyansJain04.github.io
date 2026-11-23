@@ -6,7 +6,6 @@ img: assets/img/projects/bicycle-safety/thumb.jpg
 importance: 2
 category: "Hardware & Embedded"
 links:
-  code: https://github.com/ShreyansJain04/BicycleSafetyApp   # TODO: verify; repo not reachable via gh (private or renamed)
 tags: [Android, sensors, safety, mobile]
 ---
 

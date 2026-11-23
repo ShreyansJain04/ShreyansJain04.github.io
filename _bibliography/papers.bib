@@ -1,17 +1,23 @@
 ---
 ---
 
-@inproceedings{panda2024variational,
-  abbr={NeurIPS Workshop},
-  title={Variational Diffusion Unlearning: A Variational Inference Framework for Unlearning in Diffusion Models},
-  author={Panda, S. and Varun, M.S. and Jain, Shreyans and Maharana, S. K. and Prathosh, A. P.},
-  booktitle={NeurIPS Workshop on Safe and Responsible Generative AI},
-  year={2024},
-  abstract={We present a variational inference framework for unlearning specific concepts from diffusion models while minimizing interference with unrelated concepts. Our approach uses an adapter network and novel loss function to reduce the likelihood of targeted concepts.},
-  url={https://openreview.net/forum?id=B2wDjiED9V},
-  pdf={https://openreview.net/forum?id=B2wDjiED9V},
+@article{panda2026unlearning,
+  abbr={TMLR},
+  title={Unlearning in Diffusion Models under Data Constraints: A Variational Inference Approach},
+  author={Panda, Subhodip and M S, Varun and Jain, Shreyans and Maharana, Sarthak Kumar and A.P., Prathosh},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2026},
+  abstract={We present Variational Diffusion Unlearning (VDU), a one-step framework that removes undesired classes or features from a pre-trained diffusion model using only the subset of training data to be forgotten. The loss combines a plasticity inducer, which lowers the log-likelihood of the undesired data, with a stability regularizer that preserves generation quality. We evaluate class unlearning on MNIST, CIFAR-10 and tinyImageNet with unconditional DDPMs, and feature unlearning (e.g., an artistic style) on pre-trained Stable Diffusion. An earlier version appeared at the NeurIPS 2024 Workshop on Safe Generative AI.},
+  url={https://openreview.net/forum?id=mAHRgieyOV},
+  html={https://openreview.net/forum?id=mAHRgieyOV},
+  arxiv={2510.04058},
+  pdf={https://arxiv.org/pdf/2510.04058},
+  note={Earlier version at the NeurIPS 2024 Workshop on Safe Generative AI},
+  preview={vdu.png},
   selected={true}
 }
+
 
 @inproceedings{jain2024wavshadow,
   abbr={ICVGIP},

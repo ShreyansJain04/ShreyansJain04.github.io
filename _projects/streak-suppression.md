@@ -3,8 +3,8 @@ layout: page
 title: "Real-Time Streak Artifact Suppression in Therapy-Guidance Ultrasound"
 description: "Two-stage U-Net + Fourier-attention pipeline removes streak artifacts from HIFU/histotripsy B-mode at >440 FPS, +13.7 dB reconstruction."
 img: assets/img/projects/streak-suppression/thumb.jpg
-importance: 2
-category: Research
+importance: "3"
+category: "Research"
 advisor: "Prof. Himanshu Shekhar, MUSE Lab, IITGN"
 status: "IEEE SAUS 2024 · ISTU 2024"
 period: "Dec 2023 – Jul 2024"
@@ -14,6 +14,10 @@ links:
   poster: /assets/pdf/streak_poster_saus2024.pdf
   blog: /blog/2024/realtime-streak-suppression-ultrasound/
 tags: [ultrasound, HIFU, artifact-removal, U-Net, fourier, inpainting]
+highlights:
+  - "Designed a two-stage framework: multi-channel U-Net for streak segmentation, then a Fourier-attention U-Net for inpainting."
+  - "Real-time inference at >440 FPS with +13.7 dB reconstruction gain on synthetic streak data generated with Gaussian intensity modulation."
+  - "Presented at IEEE SAUS 2024 and ISTU 2024 (Taipei)."
 ---
 <!-- TODO: verify metrics. Sources disagree: CV says +13.7 dB and >440 FPS (two-stage pipeline); the old project page said +20 dB SNR; SAUS 2024 abstract says 6.0 +/- 3.4 dB SNR and IoU 0.698 (U-Net + diffusion, initial findings). Old "154 test cases" claim not found in other sources. -->
 

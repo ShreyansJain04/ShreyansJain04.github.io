@@ -1,0 +1,31 @@
+{%- comment -%} Renders _projects of include.category as a detailed list (Nihar-style). {%- endcomment -%}
+{%- assign items = site.projects | where: "category", include.category | sort: "importance" -%}
+<div class="entry-list">
+{%- for p in items %}
+  <div class="entry">
+    <a class="entry-thumb" href="{{ p.url | relative_url }}"><img src="{{ p.img | relative_url }}" alt="{{ p.title }}" loading="lazy"></a>
+    <div class="entry-body">
+      <div class="entry-badges">
+        {%- if p.status %}<span class="status-pill">{{ p.status }}</span>{% endif -%}
+        {%- if p.award %}<span class="badge-award small"><i class="fas fa-trophy"></i> {{ p.award }}</span>{% endif -%}
+        {%- if p.role %}<span class="role-pill">{{ p.role }}</span>{% endif -%}
+      </div>
+      <h3 class="entry-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+      <div class="entry-meta">
+        {%- if p.advisor %}<span><i class="fas fa-chalkboard-teacher"></i> {{ p.advisor }}</span>{% endif -%}
+        {%- if p.period %}<span><i class="far fa-calendar"></i> {{ p.period }}</span>{% endif -%}
+      </div>
+      {%- if p.highlights %}
+      <ul class="entry-points">{% for h in p.highlights %}<li>{{ h | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+      {%- else %}<p class="entry-desc">{{ p.description }}</p>{% endif %}
+      <div class="project-links">
+        <a class="btn-link-pill" href="{{ p.url | relative_url }}"><i class="fas fa-arrow-right"></i> Details</a>
+        {%- if p.links.paper %}<a class="btn-link-pill" href="{{ p.links.paper }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a>{% endif -%}
+        {%- if p.links.code %}<a class="btn-link-pill" href="{{ p.links.code }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif -%}
+        {%- if p.links.demo %}<a class="btn-link-pill" href="{{ p.links.demo }}" target="_blank" rel="noopener"><i class="fas fa-play-circle"></i> Demo</a>{% endif -%}
+        {%- if p.links.blog %}<a class="btn-link-pill" href="{{ p.links.blog | relative_url }}"><i class="fas fa-pen-nib"></i> Write-up</a>{% endif -%}
+      </div>
+    </div>
+  </div>
+{%- endfor %}
+</div>
