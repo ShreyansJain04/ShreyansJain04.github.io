@@ -6,30 +6,19 @@
     {%- else -%}
     <a href="{{ project.url | relative_url }}">
       {%- endif %}
-      <div class="card hoverable">
+      <div class="card hoverable project-card">
         {%- if project.img %}
-        {%- include figure.html
-          path=project.img
-          alt="project thumbnail" -%}
+        <div class="card-thumb">
+        {%- include figure.html path=project.img alt=project.title -%}
+        </div>
         {%- endif %}
         <div class="card-body">
-          <h2 class="card-title text-lowercase">{{ project.title }}</h2>
+          {%- if project.award %}<span class="badge-award small"><i class="fas fa-trophy"></i> {{ project.award }}</span>{% endif %}
+          <h2 class="card-title">{{ project.title }}</h2>
           <p class="card-text">{{ project.description }}</p>
-          <div class="row ml-1 mr-1 p-0">
-            {%- if project.github -%}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}"><i class="fab fa-github gh-icon"></i></a>
-              </div>
-              {%- if project.github_stars -%}
-              <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                <i class="fas fa-star"></i>
-                <span id="{{ project.github_stars }}-stars"></span>
-              </span>
-              {%- endif %}
-            </div>
-            {%- endif %}
-          </div>
+          {%- if project.tags %}
+          <div class="project-tags">{% for t in project.tags limit:4 %}<span class="tag-chip">{{ t }}</span>{% endfor %}</div>
+          {%- endif %}
         </div>
       </div>
     </a>

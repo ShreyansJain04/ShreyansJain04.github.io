@@ -2,26 +2,24 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: blank # blank = render full name with styled first name
 first_name: Shreyans
 middle_name:
 last_name: Jain
 email: shreyans.jain@iitgn.ac.in
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: >
+  Shreyans Jain — final-year Electrical Engineering undergraduate at IIT Gandhinagar working on deep learning for medical ultrasound imaging, vision-language models and geospatial AI.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+  Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+keywords: Shreyans Jain, IIT Gandhinagar, deep learning, medical ultrasound, computer vision, vision-language models, geospatial AI, Inter IIT
 
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🔬
 
 url: https://ShreyansJain04.github.io
 baseurl:
-last_updated: false # set to true if you want to display last updated in the footer
+last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
@@ -56,7 +54,7 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 800px
+max_width: 960px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -64,9 +62,9 @@ max_width: 800px
 # Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://ShreyansJain04.github.io/assets/img/prof_pic.jpg
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -76,9 +74,9 @@ github_username: ShreyansJain04
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: # your LinkedIn user name
+linkedin_username: shreyans-jain-1b56aa247
 telegram_username: # your Telegram user name
-scholar_userid: # your Google Scholar ID
+scholar_userid: e153ofkAAAAJ
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 orcid_id: # your ORCID ID
@@ -107,7 +105,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the best way to reach me — I am happy to talk about research, internships and collaborations.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -123,9 +121,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: Notes & Write-ups
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_description: Behind-the-scenes write-ups of my research and competition projects.
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -264,7 +262,7 @@ jekyll-archives:
     category: '/blog/category/:name/'
 
 display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+display_categories: ['project-writeups']
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -363,7 +361,7 @@ enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 enable_darkmode:            true   # enables switching between light/dark modes
-enable_navbar_social:       false  # enables displaying social links in the
+enable_navbar_social:       true   # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories

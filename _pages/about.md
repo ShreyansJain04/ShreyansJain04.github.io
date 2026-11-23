@@ -1,36 +1,41 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
-subtitle: "Affiliations. Address. Contacts. Motto. Etc."
+subtitle: Final-year undergraduate · Electrical Engineering · <a href="https://iitgn.ac.in/">IIT Gandhinagar</a>
+
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>IIT Gandhinagar</p>
+    <p>Gujarat, India</p>
+    <p><a href="mailto:shreyans.jain@iitgn.ac.in">shreyans.jain@iitgn.ac.in</a></p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+news: true
+latest_posts: true
+selected_papers: true
+social: true
 ---
 
-# About Me
+Hi! I'm **Shreyans**, a final-year B.Tech student in Electrical Engineering at IIT Gandhinagar. I build deep learning systems for **images that are hard to read**: ultrasound scans corrupted by therapy fields, satellite imagery you want to query in plain English, and images that may or may not have come from a generative model.
 
-I'm Shreyans Jain, a third-year undergraduate at IIT Gandhinagar pursuing a B.Tech in Electrical Engineering. My passion lies in cutting-edge research in machine learning, computer vision, and signal processing. I have been actively involved in innovative projects—from developing robust AI image classifiers and artifact detection frameworks to designing hardware-accelerated neural network models on FPGA. 
+My research has been with the [MUSE Lab](https://labs.iitgn.ac.in/muselaboratory/) (Prof. Himanshu Shekhar) on medical ultrasound, with Prof. Prathosh A.P. at **IISc Bangalore** on machine unlearning for diffusion models, with Prof. Shanmuganathan Raman on shadow removal, and at **Purdue University** on LLM-based tutoring for GIS education.
 
-My work has earned recognition such as a Silver Medal at the Inter IIT Tech Meet 13.0, and I continually strive to build solutions that merge advanced research with real-world application.
+<div class="highlights">
+  <div class="hl"><div class="hl-num">2× 🥈</div><div class="hl-label">Inter-IIT Tech Meet silver medals (13.0 &amp; 14.0)</div></div>
+  <div class="hl"><div class="hl-num">5</div><div class="hl-label">papers &amp; conference presentations</div></div>
+  <div class="hl"><div class="hl-num">440+ FPS</div><div class="hl-label">real-time ultrasound artifact suppression</div></div>
+  <div class="hl"><div class="hl-num">99.21%</div><div class="hl-label">AI-image detection accuracy on CIFAKE</div></div>
+</div>
 
-**Connect with Me:**
-- **Email:** [shreyans.jain@iitgn.ac.in](mailto:shreyans.jain@iitgn.ac.in)
-- **LinkedIn:** [Shreyans Jain](https://www.linkedin.com/in/shreyans-jain-1b56aa247/)
-- **GitHub:** [shreyansjain04](https://github.com/shreyansjain04)
+**Research interests**
+<div class="interest-chips">
+  <span>Medical ultrasound imaging</span><span>Vision-language models</span><span>Geospatial AI</span>
+  <span>Generative models &amp; unlearning</span><span>Image restoration</span><span>Retrieval-augmented generation</span>
+</div>
 
+**Featured work**: [GeoNLI](/projects/geonli/) (Inter-IIT 14.0, ISRO) · [AI-generated image detection](/projects/ai-image-detection/) (Inter-IIT 13.0, Adobe) · [BubbleSeg](/projects/bubbleseg/) · [Real-time streak suppression](/projects/streak-suppression/). Browse [all projects](/projects/) or read the [write-ups](/blog/).
 
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm looking for **research positions and graduate opportunities** in computer vision and medical imaging. Feel free to [email me](mailto:shreyans.jain@iitgn.ac.in).

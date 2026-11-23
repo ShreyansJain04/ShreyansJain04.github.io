@@ -1,0 +1,61 @@
+// Custom styles for Shreyans Jain's site
+
+// ---------- project header ----------
+.project-meta {
+  display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center;
+  margin: .25rem 0 .75rem; font-size: .92rem; color: var(--global-text-color-light);
+  .meta-item i { margin-right: .3rem; color: var(--global-theme-color); }
+}
+.badge-award {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .2rem .65rem; border-radius: 999px; font-weight: 600; font-size: .85rem;
+  background: rgba(255, 179, 0, .15); color: #b37400; border: 1px solid rgba(255, 179, 0, .45);
+  &.small { font-size: .72rem; padding: .1rem .5rem; margin-bottom: .4rem; }
+}
+html[data-theme='dark'] .badge-award { color: #ffcf5c; }
+.project-links { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0 .75rem; }
+.btn-link-pill {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .3rem .85rem; border-radius: 999px; font-size: .88rem; font-weight: 500;
+  border: 1px solid var(--global-theme-color); color: var(--global-theme-color) !important;
+  transition: all .15s ease;
+  &:hover { background: var(--global-theme-color); color: var(--global-bg-color) !important; text-decoration: none; }
+}
+.project-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .4rem; }
+.tag-chip {
+  font-size: .72rem; padding: .1rem .5rem; border-radius: 6px;
+  background: var(--global-code-bg-color, rgba(0,0,0,.05)); color: var(--global-text-color-light);
+}
+
+// ---------- TL;DR box ----------
+.tldr {
+  border-left: 4px solid var(--global-theme-color);
+  background: var(--global-code-bg-color, rgba(0,0,0,.03));
+  padding: .9rem 1.1rem; border-radius: 0 8px 8px 0; margin: 1rem 0 1.5rem;
+  p { margin-bottom: .35rem; } p:last-child { margin-bottom: 0; }
+}
+
+// ---------- project cards ----------
+.projects .card.project-card {
+  border-radius: 12px; overflow: hidden;
+  .card-thumb { aspect-ratio: 16 / 10; overflow: hidden; background: var(--global-code-bg-color);
+    figure { margin: 0; height: 100%; }
+    img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+  }
+  &:hover .card-thumb img { transform: scale(1.04); }
+  .card-title { font-size: 1.05rem; font-weight: 600; margin-bottom: .4rem; text-transform: none; }
+  .card-text { font-size: .88rem; color: var(--global-text-color-light); margin-bottom: .3rem; }
+}
+.projects h2.category { text-transform: none; }
+
+// ---------- about page highlights ----------
+.highlights {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem; margin: 1.25rem 0 1.5rem;
+  .hl { border: 1px solid var(--global-divider-color); border-radius: 10px; padding: .75rem .9rem; }
+  .hl-num { font-size: 1.35rem; font-weight: 700; color: var(--global-theme-color); line-height: 1.1; }
+  .hl-label { font-size: .8rem; color: var(--global-text-color-light); }
+}
+.interest-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 1rem;
+  span { font-size: .82rem; padding: .2rem .65rem; border-radius: 999px; border: 1px solid var(--global-divider-color); }
+}
+figure figcaption.caption { font-size: .85rem; color: var(--global-text-color-light); text-align: center; margin-top: .4rem; }

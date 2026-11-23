@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Competition wins, research and things I have built. Inter-IIT Tech Meet projects first.  Click a card for the full story.
 nav: true
-nav_order: 2
-display_categories: [work, fun]
+nav_order: 1
+display_categories: ["Inter-IIT Tech Meet", "Research", "ML & Data Projects", "Hardware & Embedded"]
 horizontal: false
 ---
 

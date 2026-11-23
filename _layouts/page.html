@@ -7,6 +7,26 @@ layout: default
           <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <p class="post-description">{{ page.description }}</p>
+            {%- if page.collection == "projects" %}
+            <div class="project-meta">
+              {%- if page.award %}<span class="badge-award"><i class="fas fa-trophy"></i> {{ page.award }}</span>{% endif %}
+              {%- if page.period %}<span class="meta-item"><i class="far fa-calendar"></i> {{ page.period }}</span>{% endif %}
+              {%- if page.team %}<span class="meta-item"><i class="fas fa-users"></i> {{ page.team }}</span>{% endif %}
+            </div>
+            {%- if page.links %}
+            <div class="project-links">
+              {%- if page.links.paper %}<a class="btn-link-pill" href="{{ page.links.paper }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a>{% endif %}
+              {%- if page.links.code %}<a class="btn-link-pill" href="{{ page.links.code }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
+              {%- if page.links.demo %}<a class="btn-link-pill" href="{{ page.links.demo }}" target="_blank" rel="noopener"><i class="fas fa-play-circle"></i> Live demo</a>{% endif %}
+              {%- if page.links.poster %}<a class="btn-link-pill" href="{{ page.links.poster | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-image"></i> Poster</a>{% endif %}
+              {%- if page.links.report %}<a class="btn-link-pill" href="{{ page.links.report }}" target="_blank" rel="noopener"><i class="fas fa-book"></i> Report</a>{% endif %}
+              {%- if page.links.blog %}<a class="btn-link-pill" href="{{ page.links.blog | relative_url }}"><i class="fas fa-pen-nib"></i> Write-up</a>{% endif %}
+            </div>
+            {%- endif %}
+            {%- if page.tags %}
+            <div class="project-tags">{% for t in page.tags %}<span class="tag-chip">{{ t }}</span>{% endfor %}</div>
+            {%- endif %}
+            {%- endif %}
           </header>
 
           <article>

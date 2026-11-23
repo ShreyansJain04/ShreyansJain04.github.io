@@ -17,11 +17,15 @@
   abbr={ICVGIP},
   title={WavShadow: Wavelet Based Shadow Segmentation and Removal},
   author={Jain, Shreyans and Vekaria, Viraj and Gandhi, Karan and Arora, Aadya},
-  booktitle={13th Indian Conference on Computer Vision, Graphics and Image Processing},
+  booktitle={15th Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP)},
+  address={Bengaluru, India},
+  month={December},
   year={2024},
   abstract={We introduce WavShadow, a novel approach for shadow segmentation and removal using wavelet transforms. Our method effectively identifies and eliminates shadows while preserving image details and texture information.},
   url={https://doi.org/10.48550/arXiv.2411.05747},
   pdf={https://arxiv.org/pdf/2411.05747.pdf},
+  arxiv={2411.05747},
+  preview={wavshadow.png},
   selected={true}
 }
 
@@ -34,7 +38,8 @@
   month={April},
   address={Taipei, Taiwan},
   abstract={We present a hybrid U-Net and enhanced masked autoencoder approach to suppress streak artifacts in ultrasound images during therapy guidance, improving visualization for therapeutic ultrasound applications.},
-  selected={true}
+  selected={true},
+  preview={streak.png}
 }
 
 @inproceedings{agarwal2024suppressing,
@@ -45,10 +50,10 @@
   year={2024},
   month={March},
   abstract={We present a combined U-Net and diffusion model to remove streak artifacts in therapeutic ultrasound imaging. Using a denoising U-Net with skip connections and text-based prompts for enhanced inpainting, initial results show effective artifact removal, an improved Signal-to-Noise Ratio by 6.0 ± 3.4 dB, and an IOU score of 0.698. Rapid model convergence suggests potential for real-time clinical use. Future work will validate the model on diverse datasets and optimize performance.},
-  url={https://github.com/ShreyansJain04/Streak-Removal-in-HIFU-Images},
-  pdf={Poster - Inpainting for Therapeutic ultrasound.pptx.pdf},
-  dimensions={true},
-  selected={true}
+  code={https://github.com/agarwal-mihir/Fourier-StreakNet},
+  pdf={streak_poster_saus2024.pdf},
+  selected={true},
+  preview={streak.png}
 }
 
 @inproceedings{dhawan2024reconstruction,
@@ -60,7 +65,41 @@
   month={April},
   address={Taipei, Taiwan},
   abstract={We developed a Hybrid Attention-Based U-Net architecture to enhance Ultrasound Localization Microscopy by accurately tracking microbubbles in noisy image sequences. Our approach reduces data requirements by 40 times and achieves a peak SNR enhancement of 14.73 dB in simulated data.},
-  selected={true}
+  selected={true},
+  preview={ulm.png}
 }
 
-]
+@unpublished{jain2025bubbleseg,
+  abbr={Manuscript},
+  title={Improved Segmentation of Histotripsy Bubble Clouds Using Modern CNN Architectures and Combined Dice-Focal Loss},
+  author={Jain, Shreyans and Gaonkar, Soham and Borate, Aditya and Dhawan, Ruchika and Bader, Kenneth B. and Shekhar, Himanshu},
+  note={Manuscript},
+  year={2025},
+  abstract={Histotripsy is a non-invasive focused ultrasound therapy that mechanically ablates tissue through cavitation bubble clouds. A semantic segmentation framework was developed to segment histotripsy ablation regions from B-mode ultrasound, using a Combined Dice-Focal Loss to address the severe class imbalance of sparse bubble clouds. Six architectures were evaluated and compared against a prior ResNet-18 approach. EfficientNet-B0 U-Net with Combined Dice-Focal Loss achieved a mean IoU of 0.838 and global accuracy of 0.968 with 7.9M parameters; DeepLabV3 achieved a mean IoU of 0.812 as an upper-bound reference; both exceed the prior mean IoU of 0.765.},
+  code={https://github.com/ShreyansJain04/BubbleSegmentation},
+  selected={true},
+  preview={bubbleseg.png}
+}
+
+@unpublished{dhawan2025vascflexmap,
+  abbr={Manuscript},
+  title={{VascFlexMap}: Microvascular Ultrasound Imaging at Low Frame Rates Using Sparse Data and a Transformer-Decoder Network},
+  author={Dhawan, Ruchika and Agarwal, Mihir and Jain, Shreyans and Shekhar, Himanshu},
+  note={Manuscript. Ruchika Dhawan and Mihir Agarwal contributed equally},
+  year={2025},
+  abstract={Super-resolution ultrasound reveals microvascular structures with exquisite resolution, but clinical translation is limited by the need for ultrafast frame rates, massive data volumes, and long reconstruction times. This work proposes a deep learning framework that reconstructs microvascular maps from low-frame-rate contrast-enhanced ultrasound sequences, bypassing explicit microbubble localization and tracking. A transformer-decoder network with learned linear projections models spatiotemporal dependencies across sparse sequences and reconstructs vessel probability maps refined by a post-processing stage. On in vivo rat brain bolus data from the PALA challenge, under up to 500-fold data reduction (341 frames at 2 FPS vs. 170400 frames at 1000 FPS), the pipeline recovered coherent microvascular architecture, with vessel widths broadened about three-fold relative to reference SR-US, and end-to-end reconstruction in 28-133 seconds on an NVIDIA H100 GPU.},
+  selected={true},
+  preview={ulm.png}
+}
+
+@techreport{jain2025geonli,
+  abbr={Inter-IIT 14.0},
+  title={{GeoNLI}: Refine--Generate--Filter--Reason --- A Unified Pipeline for Grounding, Captioning and {VQA} on Satellite Imagery},
+  author={Gandhi, Karan and Jain, Laksh and Mohane, Romit and Jain, Shreyans and Shikarvar, Umang and Vekaria, Viraj},
+  institution={Inter-IIT Tech Meet 14.0, Team 58},
+  year={2025},
+  abstract={Satellite imagery analysis is challenged by spectral heterogeneity (FCC, SAR) and dense object layouts. We present GeoNLI, a unified Refine-Generate-Filter-Reason system that restores non-RGB inputs via a deterministic domain-adaptation layer, performs oriented grounding using a weakly-supervised SAM3 regime, and reduces hallucination in captioning through grounding-first context injection. For VQA, GeoNLI routes numeric queries to a geometric engine for exact computation. On VRSBench, GeoNLI delivers 2x higher strict-precision grounding (Acc@0.7) than strong VLM baselines while improving recall in dense scenes.},
+  code={https://github.com/Umang-Shikarvar/GeoNLI},
+  selected={false},
+  preview={geonli.png}
+}
