@@ -10,6 +10,7 @@ status: "ICVGIP 2024"
 period: "Feb 2024 – Nov 2024"
 team: "Shreyans Jain, Viraj Vekaria, Karan Gandhi, Aadya Arora (equal contribution)"
 links:
+  blog: /blog/2024/wavshadow-shadow-removal/
   paper: https://arxiv.org/abs/2411.05747
 tags: [computer-vision, shadow-removal, wavelets, masked-autoencoder, segmentation]
 highlights:

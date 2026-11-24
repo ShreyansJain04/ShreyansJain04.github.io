@@ -9,6 +9,8 @@ advisor: "Prof. Himanshu Shekhar, MUSE Lab, IITGN"
 status: "Manuscript · ISTU 2024"
 period: "2024 - 2025"
 team: "Ruchika Dhawan, Mihir Agarwal, Shreyans Jain, Himanshu Shekhar"
+links:
+  blog: /blog/2025/vascflexmap-microvascular-ultrasound/
 tags: [ultrasound, super-resolution, ULM, transformer, microvasculature, sparse-data]
 highlights:
   - "Transformer-decoder network that maps microvessels from contrast ultrasound acquired at only 2–50 FPS."

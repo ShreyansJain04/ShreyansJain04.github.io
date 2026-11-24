@@ -10,6 +10,7 @@ advisor: "Prof. Prathosh A.P., IISc Bangalore"
 period: "May 2024 – Nov 2024"
 team: "Subhodip Panda, Varun M S, Shreyans Jain, Sarthak Kumar Maharana, Prathosh A.P."
 links:
+  blog: /blog/2026/variational-diffusion-unlearning/
   paper: https://openreview.net/forum?id=mAHRgieyOV
   report: https://arxiv.org/abs/2510.04058
 tags: [diffusion models, machine unlearning, variational inference, Stable Diffusion]
