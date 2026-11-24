@@ -8,7 +8,7 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
-featured: 7
+featured: 8
 ---
 
 > **TL;DR.** The earlier model was nearly blind below 500 pulses, which is exactly when a clinician would adjust treatment. Switching to a Dice + Focal loss helped more than any architecture change: it improved every model we tried, and a 7.9M-parameter EfficientNet-B0 U-Net beat a 58.6M-parameter DeepLabV3 on Dice while tracking the true lesion area from the first frames.

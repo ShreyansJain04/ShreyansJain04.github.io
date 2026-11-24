@@ -7,7 +7,7 @@ tags: [market-microstructure, india, execution, quant]
 categories: markets
 related_posts: false
 og_image: https://ShreyansJain04.github.io/assets/img/blog/overnight/fig1-nifty-split.png
-featured: 1
+featured: 2
 toc:
   sidebar: left
 ---

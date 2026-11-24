@@ -6,7 +6,7 @@ description: "The Cont–de Larrard view of the next price move as a race betwee
 tags: [market-microstructure, order-book, execution, stochastic-processes, quant]
 categories: markets
 related_posts: false
-featured: 3
+featured: 4
 og_image: https://ShreyansJain04.github.io/assets/img/blog/queue/fig1-pup.png
 toc:
   sidebar: left

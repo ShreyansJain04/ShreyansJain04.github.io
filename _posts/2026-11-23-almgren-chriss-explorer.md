@@ -7,7 +7,7 @@ tags: [execution, market-microstructure, optimal-control, quant]
 categories: markets
 related_posts: false
 og_image: https://ShreyansJain04.github.io/assets/img/blog/almgren-chriss/preview.png
-featured: 4
+featured: 5
 toc:
   sidebar: left
 ---

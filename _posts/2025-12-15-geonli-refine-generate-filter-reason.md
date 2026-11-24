@@ -8,7 +8,7 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
-featured: 6
+featured: 7
 ---
 
 > **TL;DR.** Don't ask a VLM for coordinates. We had SAM3 produce masks, filtered them with CLIP, and only asked the VLM to pick among numbered boxes; counts and areas came from geometry, not generation. That design took silver on ISRO's problem with under a fifth of the compute the other top-5 teams used, and beat GeoChat on strict grounding (31.3% vs 19.9% Acc@0.7).

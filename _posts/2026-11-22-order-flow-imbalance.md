@@ -6,7 +6,7 @@ description: "Replicating Cont, Kukanov and Stoikov's order flow imbalance on 53
 tags: [market-microstructure, order-book, execution, quant]
 categories: markets
 related_posts: false
-featured: 2
+featured: 3
 og_image: https://ShreyansJain04.github.io/assets/img/blog/ofi/fig1-scatter.png
 toc:
   sidebar: left
