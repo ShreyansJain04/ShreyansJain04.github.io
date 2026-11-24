@@ -65,5 +65,5 @@ Major cortical branches and higher-order microvessels stay visible down to 2 FPS
 
 - Co-author of the manuscript (equal-contribution first authors are Ruchika Dhawan and Mihir Agarwal).
 - Contributed to the ISTU 2024 hybrid attention-based U-Net on sparse ULM data that preceded this work.
-- Co-inventor on a filed patent from this line of work: *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data*.
+- Equal first inventor on a published Indian patent from this line of work: *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data* (Application No. 202521001823, published Feb 2026).
 <!-- TODO: add specific contributions (e.g. preprocessing, experiments, figures) once confirmed. -->

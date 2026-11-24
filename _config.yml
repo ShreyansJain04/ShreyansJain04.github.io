@@ -6,9 +6,9 @@ title: blank # blank = render full name with styled first name
 first_name: Shreyans
 middle_name:
 last_name: Jain
-email: shreyans.jain@iitgn.ac.in
+email: shreyans.jain@alumni.iitgn.ac.in
 description: >
-  Shreyans Jain — final-year Electrical Engineering undergraduate at IIT Gandhinagar working on deep learning for medical ultrasound imaging, vision-language models and geospatial AI.
+  Shreyans Jain — IIT Gandhinagar Electrical Engineering graduate (2026), now at Barclays, with research in deep learning for medical ultrasound imaging, vision-language models and geospatial AI.
 footer_text: >
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: Shreyans Jain, IIT Gandhinagar, deep learning, medical ultrasound, computer vision, vision-language models, geospatial AI, Inter IIT

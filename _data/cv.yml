@@ -4,20 +4,20 @@
     - name: Full Name
       value: Shreyans Jain
     - name: Status
-      value: Final Year Undergraduate, Artificial Intelligence and Electrical Engineering
+      value: BIIC Graduate, Barclays (Mumbai) · B.Tech Electrical Engineering, IIT Gandhinagar (2026)
     - name: Email
-      value: shreyans.jain@iitgn.ac.in
+      value: shreyans.jain@alumni.iitgn.ac.in
     - name: Institute
       value: Indian Institute of Technology Gandhinagar (IIT Gandhinagar)
 
 - title: Education
   type: time_table
   contents:
-    - title: B.Tech., Electrical Engineering
+    - title: B.Tech., Electrical Engineering (Minor in AI)
       institution: IIT Gandhinagar
-      year: 2022 – Present
+      year: 2022 – 2026
       description:
-        - "CPI: 8.74/10"
+        - "CPI: 8.85/10"
     - title: Class XII (Physics, Chemistry, Maths)
       institution: Maa Bharti Sr. Sec. School
       year: 2021 – 2022
@@ -48,6 +48,11 @@
 - title: Industry Experience
   type: time_table
   contents:
+    - title: BIIC Graduate
+      institution: Barclays, Mumbai
+      year: 2026 – Present
+      description:
+        - "Applying machine learning and algorithmic methods to equity execution (cash equities)."
     - title: AI Engineer
       institution: "KrishiMandir (Advisors: Mr. Sumeet Mohanty, Mr. Noel Kurien)"
       year: Dec '23 – Mar '24
@@ -66,11 +71,14 @@
     - "2nd position at the Undergraduate Research Showcase at IIT Gandhinagar (out of 120+ presenters)."
     - "AIR 3 across 40,000 candidates in IMU-CET 2022."
     - "Research Consultant position and cash prize from WorldQuant for achieving a top rank in the IITGN Alphathon."
+    - "Devika & Prashant Nadkarni Scholarship (Rs. 1,00,000), AY 2024-25, for an international research internship."
+    - "Sailing: represented India at the India International Sailing Regatta, Chennai; Best Helm, NDA Inland Enterprise Championship; Most Promising Sailor, Hyderabad Sailing Week (Laser 4.7)."
 
 - title: Patents
   type: list
   contents:
-    - "A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data. R. Dhawan, M. Agarwal, S. Jain, R. H. Viraj, H. Shekhar. Patent application filed through IIT Gandhinagar."
+    - "A Real-Time Ultrasound Image Processing System and a Method Thereof. Indian Patent Application No. 202621026094, filed Mar 2026, published Apr 2026 (equal first inventor)."
+    - "A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data. R. Dhawan, M. Agarwal, S. Jain, R. H. Viraj, H. Shekhar. Indian Patent Application No. 202521001823, filed Jan 2025, published Feb 2026 (equal first inventor)."
 
 - title: Selected Projects
   type: time_table
@@ -122,3 +130,13 @@
       year: Jan '25 – Apr '25
       description:
         - "Designed labs, graded 200+ students, held office hours, and delivered a guest lecture to 400+."
+    - title: Student Guide
+      institution: IIT Gandhinagar
+      year: Two consecutive years
+      description:
+        - "Mentored incoming first-year students through the transition to college."
+    - title: Peer Reviewer
+      institution: Biomedical Signal Processing and Control (Elsevier)
+      year: "2026"
+      description:
+        - "Reviewed manuscripts for the journal."

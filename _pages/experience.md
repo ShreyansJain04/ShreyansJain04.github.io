@@ -32,14 +32,14 @@ nav_order: 2
 </div>
 
 <div class="xp-item">
-  <div class="xp-head"><span class="xp-role">Undergraduate Researcher, MUSE Lab</span><span class="xp-date">Dec 2023 – 2025</span></div>
-  <div class="xp-org"><b>IIT Gandhinagar</b> · Advisor: Prof. Himanshu Shekhar</div>
+  <div class="xp-head"><span class="xp-role">Undergraduate Researcher, MUSE Lab</span><span class="xp-date">Dec 2023 – 2026</span></div>
+  <div class="xp-org"><b>IIT Gandhinagar</b> · Advisor: Prof. Himanshu Shekhar · with Prof. Kenneth Bader (University of Chicago)</div>
   <ul>
     <li><b>Real-time streak suppression:</b> a two-stage pipeline (multi-channel U-Net segmentation, then Fourier-attention U-Net inpainting) that runs at <b>&gt;440 FPS</b> and improves reconstruction by <b>+13.7 dB</b> on synthetic streak data.</li>
     <li><b>BubbleSeg:</b> CNN segmentation of histotripsy bubble clouds with a combined Dice-Focal loss.</li>
     <li><b>VascFlexMap:</b> transformer-decoder network for microvascular ultrasound imaging at low frame rates.</li>
     <li>Two presentations at <b>ISTU 2024</b> (Taipei) and one at <b>IEEE SAUS 2024</b>.</li>
-    <li><b>Patent filed</b> as co-inventor: <i>A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data</i>.</li>
+    <li><b>Two published Indian patents</b> as equal first inventor: <i>A Real-Time Ultrasound Image Processing System and a Method Thereof</i> (202621026094) and <i>A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data</i> (202521001823).</li>
   </ul>
   <div class="project-links"><a class="btn-link-pill" href="/projects/streak-suppression/"><i class="fas fa-folder-open"></i> Streak suppression</a><a class="btn-link-pill" href="/projects/bubbleseg/"><i class="fas fa-folder-open"></i> BubbleSeg</a><a class="btn-link-pill" href="/projects/vascflexmap/"><i class="fas fa-folder-open"></i> VascFlexMap</a></div>
 </div>
@@ -55,6 +55,15 @@ nav_order: 2
 </div>
 
 ## Industry
+
+<div class="xp-item">
+  <div class="xp-head"><span class="xp-role">BIIC Graduate</span><span class="xp-date">2026 – present</span></div>
+  <div class="xp-org"><b>Barclays</b>, Mumbai</div>
+  <ul>
+    <li>Applying machine learning and algorithmic methods to equity execution in cash equities, working with execution quantitative researchers.</li>
+    <li>Joined through IIT Gandhinagar's Day-0 campus placement.</li>
+  </ul>
+</div>
 
 <div class="xp-item">
   <div class="xp-head"><span class="xp-role">AI Engineer</span><span class="xp-date">Dec 2023 – Mar 2024</span></div>

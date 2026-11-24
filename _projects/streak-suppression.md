@@ -6,7 +6,7 @@ img: assets/img/projects/streak-suppression/thumb.jpg
 importance: "3"
 category: "Research"
 advisor: "Prof. Himanshu Shekhar, MUSE Lab, IITGN"
-status: "IEEE SAUS 2024 · ISTU 2024"
+status: "IEEE SAUS 2024 · ISTU 2024 · Patent"
 period: "Dec 2023 – Jul 2024"
 team: "Shreyans Jain, Mihir Agarwal, Ruchika Dhawan, Nishita Mistry, Himanshu Shekhar"
 links:
@@ -61,5 +61,6 @@ Therapeutic ultrasound is guided by B-mode imaging, but the therapy pulses inter
 - Designed and implemented the two-stage framework (multi-channel U-Net segmentation, Fourier-attention U-Net inpainting).
 - Built the synthetic streak generator (Gaussian intensity modulation) and the training data pipeline.
 - First author on the ISTU 2024 abstract (Taipei) and co-author on the SAUS 2024 paper; poster linked above.
+- Equal first inventor on the published Indian patent *A Real-Time Ultrasound Image Processing System and a Method Thereof* (Application No. 202621026094, published Apr 2026).
 
 Code: [Fourier-StreakNet](https://github.com/agarwal-mihir/Fourier-StreakNet). Write-up: [Building a real-time two-stage streak suppressor]({{ '/blog/2024/realtime-streak-suppression-ultrasound/' | relative_url }}).
