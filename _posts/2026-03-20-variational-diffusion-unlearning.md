@@ -8,7 +8,7 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
-featured: 1
+featured: 2
 ---
 
 > **TL;DR.** If all you have is the data a diffusion model should forget, Bayes' rule still points at the model you would have got by retraining without it: divide the forget set's likelihood out of the full posterior. Variational inference turns that into a two-term loss, a push away from the forget set and a variance-weighted leash back to the pretrained weights. Among methods that never touch the retained data, it gave the best image quality on every class we tested, in one or two epochs.

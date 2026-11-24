@@ -57,7 +57,7 @@ pagination:
   <div class="featured-posts mb-5">
     <h3 class="mb-3">Start here</h3>
     <div class="row">
-      {% for post in featured_posts %}
+      {% for post in featured_posts limit: 3 %}
       <div class="col-md-4 mb-3">
         <div class="card h-100 hoverable">
           <div class="card-body">
