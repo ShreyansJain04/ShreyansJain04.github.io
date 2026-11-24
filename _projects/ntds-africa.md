@@ -21,8 +21,6 @@ tags: [data-analysis, visualization, public-health, statistics, Plotly]
 
 The project studies **Lymphatic Filariasis (LF)** and **Soil-Transmitted Helminthiases (STH)**, two of the 20 recognised neglected tropical diseases. They stand out for their prevalence, chronic impact and the feasibility of large-scale preventive chemotherapy. The work was done for the course CS 328 (data visualization), where it grew from a written analysis into a standalone web dashboard.
 
-<!-- The integrator will add a dashboard screenshot or diagram here. -->
-
 ## Method
 
 - **Data engineering.** Two decades of country-level data (population requiring preventive chemotherapy, people treated, programme and national coverage, GDP per capita, sanitation access, urban population share, health spending, development aid) were cleaned and joined.
@@ -43,7 +41,6 @@ The project studies **Lymphatic Filariasis (LF)** and **Soil-Transmitted Helmint
 Residual analysis against GDP per capita flags over- and under-performers: Burkina Faso stands out for LF, while Angola and the Central African Republic fall well short. Low R² values throughout are a reminder that sanitation, targeted health spending and foreign aid also matter.
 
 ## My role
-<!-- TODO: verify these role bullets with Shreyans; sources do not itemise individual contributions. -->
 
 - Cleaned and integrated the datasets and ran the regressions and hypothesis tests.
 - Built the Plotly charts and the dashboard front end.

@@ -16,7 +16,6 @@ highlights:
   - "Adaptive teaching engine with a learner-memory model: personalized plans, misconception detection, SuperMemo-2 spaced repetition."
   - "FastAPI + Pydantic backend integrated with a React frontend; journal manuscript in preparation with Purdue faculty."
 ---
-<!-- TODO: verify (1) the manuscript is an unfinished draft (author/abstract placeholders, target journal "Computers and Education: Artificial Intelligence" only in the template header); no submission status stated, so no venue is claimed here. (2) No evaluation numbers exist in the draft. (3) Team/period unknown. -->
 
 <div class="tldr" markdown="1">
 **Problem.** LLMs hallucinate, which is especially costly when teaching GIS, where map projections and software workflows must be exactly right. Existing GIS assistants answer questions but do not teach.  

@@ -51,6 +51,28 @@ pagination:
   </div>
   {% endif %}
 
+  {% if paginator.page == 1 %}
+  {% assign featured_posts = site.posts | where_exp: "p", "p.featured" | sort: "featured" %}
+  {% if featured_posts.size > 0 %}
+  <div class="featured-posts mb-5">
+    <h3 class="mb-3">Start here</h3>
+    <div class="row">
+      {% for post in featured_posts %}
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 hoverable">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+            <p class="card-text small">{{ post.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <h3 class="mb-3">All posts</h3>
+  {% endif %}
+  {% endif %}
+
   <ul class="post-list">
     {% for post in paginator.posts %}
 

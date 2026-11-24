@@ -11,7 +11,7 @@ toc:
   sidebar: left
 ---
 
-*This post is a code-only walkthrough (the source notebook had no prose); it trains a U-Net for semantic segmentation of the Semantic Drone Dataset in PyTorch.*
+*This post is a code walkthrough that trains a U-Net for semantic segmentation of the Semantic Drone Dataset in PyTorch.*
 
 ```python
 import torch

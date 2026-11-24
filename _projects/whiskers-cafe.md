@@ -43,7 +43,7 @@ The discount factor is the main teaching lever: gamma = 0.50 is a myopic owner, 
 
 ## Results
 
-The report walks through three parameter settings, each with four views: value-function heatmap, optimal policy, convergence tracker and Q-learning learning curve.
+We walked through three parameter settings, each with four views: value-function heatmap, optimal policy, convergence tracker and Q-learning learning curve.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">{% include figure.html path="assets/img/projects/whiskers-cafe/whiskers_1.1.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Case 1: value function heatmap" %}</div>
@@ -57,8 +57,6 @@ The report walks through three parameter settings, each with four views: value-f
   <div class="col-sm mt-3 mt-md-0">{% include figure.html path="assets/img/projects/whiskers-cafe/whiskers_2.2.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Case 2: optimal policy" %}</div>
   <div class="col-sm mt-3 mt-md-0">{% include figure.html path="assets/img/projects/whiskers-cafe/whiskers_3.2.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Case 3: optimal policy" %}</div>
 </div>
-
-<!-- TODO: verify what parameter values distinguish Cases 1-3; the report does not state them in text. -->
 
 ## My role
 

@@ -41,7 +41,7 @@ For Huffman coding, Kishan and I wrote the blog around a min-heap: repeatedly po
 
 {% include figure.html path="assets/img/projects/vis-ml/huffapp.png" class="img-fluid rounded z-depth-1" zoomable=true caption="The Huffman app at an intermediate step." %}
 
-Vannsh took on the neighbouring topics: Shannon-Fano coding, noisy channel coding (with plots of bit error probability against message length and rate), mutual information, and SIREN, which stores an audio clip or an image as the weights of a small network with sinusoidal activations. SIRENs reconstruct beautifully and compress well, but the report is honest about the catch: training on one image takes on the order of an hour, so it is not practical without further optimization.
+Vannsh took on the neighbouring topics: Shannon-Fano coding, noisy channel coding (with plots of bit error probability against message length and rate), mutual information, and SIREN, which stores an audio clip or an image as the weights of a small network with sinusoidal activations. SIRENs reconstruct beautifully and compress well, but there is a catch: training on one image takes on the order of an hour, so it is not practical without further optimization.
 
 ## Fisher information, Jacobians and CORDIC
 
@@ -65,7 +65,7 @@ The app takes a transformation and shows how a small patch of space is stretched
 - **Speed is a feature.** Our per-epoch redraw showed that slow interaction kills exploration. Precompute, cache, and plot once.
 - **The blog comes first.** In our view the apps work best with a written explanation that told the reader what to look for. An app without a question to answer is a toy.
 - **Validate against a reference.** Autodiff, optimizers and Huffman codes were all checked against PyTorch or a library before we put them in front of readers.
-- **Learning is the real output.** As the report notes, a lot of the early work on each task went into learning the concept before any visualization was possible.
+- **Learning is the real output.** A lot of the early work on each task went into learning the concept before any visualization was possible.
 
 ## Links
 

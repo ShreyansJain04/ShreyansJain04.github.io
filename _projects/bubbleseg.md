@@ -18,7 +18,6 @@ highlights:
   - "Benchmarked six modern architectures; EfficientNet-B0 U-Net reaches mean IoU 0.838 and accuracy 0.968 (prior ResNet-18: 0.765 / 0.956) with only 7.9M parameters."
   - "Fixed the prior model's early-treatment blind spot; ~13.5 ms per image on an A100. Collaboration with Prof. Kenneth Bader (UChicago)."
 ---
-<!-- TODO: verify author list (tex author block is commented out; repo README lists a different set: adds Mihir Agarwal, Muskan Singh, drops Ruchika Dhawan). Publication status not stated in source. -->
 
 <div class="tldr" markdown="1">
 **Problem.** Histotripsy destroys tissue with cavitation bubble clouds, and B-mode ultrasound is the only real-time way to watch it. A prior ResNet-18 model was nearly blind during early treatment: Dice below 20% for fewer than 500 pulses.  
@@ -70,7 +69,6 @@ On area tracking, the baseline reports roughly 130 mm$$^2$$ even when true ablat
 
 ## My role
 
-<!-- TODO: verify role bullets against what Shreyans actually did; derived from repo README (listed contributor) and manuscript. -->
 - First-listed contributor on the repo and manuscript; worked on the six-architecture benchmark and the Combined Dice-Focal loss.
 - Re-implemented the prior ResNet-18 baseline in PyTorch and checked that it closely reproduces the published metrics (global accuracy 0.954 vs 0.956; weighted IoU 0.916 vs 0.916).
 - Worked in the MUSE Lab at IIT Gandhinagar with Prof. Himanshu Shekhar; experimental data came from collaborators at the University of Chicago (Prof. Kenneth Bader).

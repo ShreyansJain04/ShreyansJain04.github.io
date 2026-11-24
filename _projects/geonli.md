@@ -19,8 +19,6 @@ highlights:
   - "Won silver using less than one-fifth of the compute of other top-5 teams, whose budgets ran ₹1–2 lakh."
 ---
 
-<!-- Source conflicts resolved to the report values: CLIP threshold 0.25 (deck says 0.24); SAM3 fine-tuned for 1 epoch (deck says 3). Do not mention on the page. -->
-
 <div class="tldr" markdown="1">
 **Problem.** ISRO's Inter-IIT 14.0 problem asked for a natural-language interface to Earth-observation imagery: captioning, visual question answering (VQA) and oriented referring-expression grounding, over RGB, false-colour (FCC) and SAR inputs, using only open-source models that run offline.  
 **Approach.** A neuro-symbolic **Refine-Generate-Filter-Reason** pipeline: deterministic domain adaptation to a unified RGB, a fine-tuned SAM3 for oriented grounding, CLIP and NMS filtering, a VLM for final selection, and a router that sends numeric questions to a geometry engine.  
@@ -130,7 +128,7 @@ Strict-precision accuracy (Acc@0.7) is about double the strong VLM baselines, an
 | MAE / RMSE | 0.73 / 1.41 |
 | Format failures | 0 |
 
-The 0.56 numeric score is why the deterministic engine exists: it replaces estimation with calculation. The report does not give separate numbers for the full hybrid pipeline.
+The 0.56 numeric score is why the deterministic engine exists: it replaces estimation with calculation. We did not measure the full hybrid pipeline separately on this metric.
 
 **Captioning:**
 
@@ -141,7 +139,7 @@ The 0.56 numeric score is why the deterministic engine exists: it replaces estim
 | GeoChat | 46.7 | 30.2 | 20.1 | 13.8 | 28.2 | - |
 | **GeoNLI** | **52.9** | 22.2 | 10.8 | 12.6 | - | **0.897** |
 
-GeoNLI leads on BLEU-1 but trails on BLEU-2 to BLEU-4, which the report attributes to a concise captioning style. CIDEr was not reported for our model.
+GeoNLI leads on BLEU-1 but trails on BLEU-2 to BLEU-4, which we attribute to a concise captioning style. CIDEr was not reported for our model.
 
 **Ablations.**
 

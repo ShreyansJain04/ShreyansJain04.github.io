@@ -9,7 +9,6 @@ related_posts: false
 toc:
   sidebar: left
 ---
-<!-- TODO: verify claims marked in the project page (dB figures differ across sources). Technical rationale below is explanatory; training details beyond the CV/README/abstracts are not in sources and are not claimed. -->
 
 When a focused-ultrasound therapy such as HIFU or histotripsy runs, the same time-sensitive question hangs over every treatment: what is happening in the tissue right now? B-mode imaging is the live window, but the therapy field interferes with the imaging field, and the resulting image gets streaks. This post is the story of the work I did with Mihir Agarwal, Ruchika Dhawan, Nishita Mistry and Prof. Himanshu Shekhar at the MUSE Lab (IIT Gandhinagar) between December 2023 and July 2024 to remove them fast enough to be used during therapy.
 

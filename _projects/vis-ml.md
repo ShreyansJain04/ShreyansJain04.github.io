@@ -69,7 +69,7 @@ Each card opens a live app or blog. All of them are listed on the [project Notio
   <div class="col-sm mt-3 mt-md-0">{% include figure.html path="assets/img/projects/vis-ml/siren_ss.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Image reconstructed by a SIREN" %}</div>
 </div>
 
-One small measured result from the report: a from-scratch RMSProp contributed to the open-source wimpyML library reached 97.11% on MNIST, against 97.31% for `torch.optim.RMSprop`, with similar training time (115.7 s versus 113.3 s for 10 iterations).
+One small measured result: a from-scratch RMSProp contributed to the open-source wimpyML library reached 97.11% on MNIST, against 97.31% for `torch.optim.RMSprop`, with similar training time (115.7 s versus 113.3 s for 10 iterations).
 
 ## My role
 

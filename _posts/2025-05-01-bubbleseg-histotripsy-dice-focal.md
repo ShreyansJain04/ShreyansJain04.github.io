@@ -8,8 +8,10 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+featured: 3
 ---
-<!-- TODO: post date is approximate (source tex has no date). -->
+
+> **TL;DR.** The earlier model was nearly blind below 500 pulses, which is exactly when a clinician would adjust treatment. Switching to a Dice + Focal loss helped more than any architecture change: it improved every model we tried, and a 7.9M-parameter EfficientNet-B0 U-Net beat a 58.6M-parameter DeepLabV3 on Dice while tracking the true lesion area from the first frames.
 
 Histotripsy is one of the more striking ideas in therapeutic ultrasound. Instead of heating tissue, it fires microsecond pulses with very high peak negative pressure into a target and creates a cloud of cavitation bubbles that mechanically liquefies it. No heat, no ionizing radiation, and no heat-sink problem near blood vessels. The catch is that you need to know what you have destroyed. This post is about the part of that problem I worked on at the MUSE Lab (IIT Gandhinagar): segmenting the ablation zone from B-mode ultrasound, and in particular, why our models first failed exactly when the clinician cares most.
 
