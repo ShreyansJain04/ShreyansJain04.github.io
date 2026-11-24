@@ -8,9 +8,10 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+featured: 7
 ---
 
-<!-- Source conflicts resolved to the report values: CLIP threshold 0.25 (deck says 0.24); SAM3 fine-tuned 1 epoch (deck says 3). Do not mention on the page. -->
+> **TL;DR.** Don't ask a VLM for coordinates. We had SAM3 produce masks, filtered them with CLIP, and only asked the VLM to pick among numbered boxes; counts and areas came from geometry, not generation. That design took silver on ISRO's problem with under a fifth of the compute the other top-5 teams used, and beat GeoChat on strict grounding (31.3% vs 19.9% Acc@0.7).
 
 In December 2025 our six-person team (Team 58: Karan Gandhi, Laksh Jain, Romit Mohane, Shreyans Jain, Umang Shikarvar and Viraj Vekaria) took the Silver Medal on the ISRO problem statement at Inter-IIT Tech Meet 14.0. We finished second, with 320.13 points behind IIT Delhi's 400, and we did it using less than one-fifth of the compute the other top-5 teams used. Their budgets were roughly ₹1-2 lakh.
 
@@ -30,7 +31,7 @@ I kept grounding for myself. It was the task everything else leaned on, so it wa
 
 ## How we chose a direction
 
-The report lays out why off-the-shelf VLMs struggle here, and these reasons drove the plan:
+Off-the-shelf VLMs struggle with this kind of imagery for four reasons, and they drove the plan:
 
 - **Coordinates as tokens lose precision.** A VLM that emits box coordinates quantises them into bins. In a parking lot or a harbour full of containers, neighbouring objects merge.
 - **Axis-aligned bias.** A ship lying on a diagonal gets a box full of background.
@@ -58,13 +59,13 @@ The point of the last stage is a division of labour. A VLM is poor at regressing
 
 ### Fine-tuning on sparse labels
 
-VRSBench does not label every instance. The report gives the example of 5 of 50 cars being annotated. A detector trained to find everything gets penalised for correct detections that nobody labelled. So we trained SAM3 on the single instance a query refers to, with a weakly supervised setup, and a composite loss of focal, presence, L1 and GIoU terms.
+VRSBench does not label every instance: a scene can have 50 cars with only 5 annotated. A detector trained to find everything gets penalised for correct detections that nobody labelled. So we trained SAM3 on the single instance a query refers to, with a weakly supervised setup, and a composite loss of focal, presence, L1 and GIoU terms.
 
 ## Compute: where we spent and where we did not
 
 The headline number is the budget. The other top-5 teams were working with budgets of roughly ₹1-2 lakh, and we used less than a fifth of the compute they did. I managed the budget and the GPU allocation, so I can say what that looked like in the design.
 
-The report does not give a per-decision cost breakdown, so I will stick to the choices it documents, which all point the same way:
+The savings did not come from one trick. They came from a handful of design choices that all point the same way:
 
 - **No training of large models from scratch.** Everything is built on open-source models used zero-shot or lightly adapted. Domain adaptation is a deterministic layer, a linear model for FCC, so RGB-pretrained models work unchanged.
 - **Small, cheap fine-tuning.** SAM3 was trained with frozen vision and text encoders, updating only the mask decoder and prompt encoder, for a single epoch. Captioning used LoRA with mixed precision on a single A100. VQA fine-tuning used two L40S GPUs.
@@ -75,7 +76,7 @@ The lesson I took from it: compute efficiency is mostly an architecture decision
 
 ## What failed or nearly did
 
-The ablations in the report are a decent record of the things that went wrong:
+Our ablations are a decent record of the things that went wrong:
 
 - **Removing the CLIP filter** caused a spike in false positives, mostly shadows, and IoU dropped by about 12%.
 - **Fine-tuning the full SAM3** diverged after two epochs. Freezing the vision encoder was essential.

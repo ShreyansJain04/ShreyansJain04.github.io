@@ -2,7 +2,8 @@
 layout: post
 title: "Fisher Information"
 date: 2023-10-19
-description: "A short numerical intuition for Fisher information via the score function and its variance."
+last_updated: 2026-11-24
+description: "What Fisher information measures, why it is the variance of the score, and why a fair coin is the hardest coin to pin down."
 tags: [statistics, probability, python]
 categories: notes
 giscus_comments: false
@@ -11,74 +12,78 @@ toc:
   sidebar: left
 ---
 
-Used to find out how much information a particular random variable has about an unknown parameter.
-Example: If we have a coin and we want to know if it is fair or not, we can toss it 100 times and count the number of heads. If we get 100 heads, we can be pretty sure that the coin is not fair. If we get 50 heads, we can't be sure. If we get 0 heads, we can be pretty sure that the coin is not fair. So, the number of heads gives us information about the fairness of the coin. The Fisher information is a measure of how much information a random variable has about an unknown parameter.
+*Updated November 2026. The first version of this note had the key relationship backwards: it said information falls as the variance of the score rises. It is the other way round. This version corrects that and adds a simulation that checks the claims.*
 
-The math:
-Its defined as the variance of the score of log likelihood of a random variable.
-But the the partial derivative of the log-likelihood behaves similarly to a random variable, just like y. It possesses both a mean and a variance.
+Fisher information measures how much a single observation $$y$$ tells you about an unknown parameter $$\theta$$ of the distribution that produced it. Toss a coin of unknown bias $$p$$ a hundred times: the count of heads carries information about $$p$$, and Fisher information puts a number on how much.
 
-When the variance of this derivative is smaller, there is a higher probability that the observed value y will closely match the true mean of the probability distribution of y. In simpler terms, more information about the true mean of y is embedded within the random variable y itself. Conversely, when the variance of the partial derivative of ℓ(λ | y=y) is greater, the information contained in y about its true mean diminishes.
+## The definition
 
-The relationship between the information embedded in 'y' regarding the genuine value of a parameter θ, drawn from the assumed distribution of 'y,' is inversely proportional to the variance of the partial derivative concerning θ in the log-likelihood function.
+Write the log-likelihood of one observation as $$\ell(\theta; y) = \log p(y \mid \theta)$$. Its derivative with respect to the parameter is the **score**:
+
+$$s(\theta; y) = \frac{\partial}{\partial \theta} \log p(y \mid \theta)$$
+
+The score depends on $$y$$, so before you observe anything it is a random variable. At the true parameter its mean is zero. Its variance is the Fisher information:
+
+$$I(\theta) = \operatorname{Var}\big[s(\theta; Y)\big] = \mathbb{E}\big[s(\theta; Y)^2\big] = -\mathbb{E}\left[\frac{\partial^2}{\partial \theta^2} \log p(Y \mid \theta)\right]$$
+
+The last form is the useful picture: information is the expected **curvature** of the log-likelihood at the true value. A sharply peaked log-likelihood pins the parameter down; a flat one does not.
+
+For $$n$$ independent observations the information adds up to $$n I(\theta)$$.
+
+## Two variances that are easy to mix up
+
+This is where my first version went wrong. There are two different variances in play:
+
+- the variance of the **data**, $$\operatorname{Var}(Y)$$, and
+- the variance of the **score**, $$\operatorname{Var}(s)$$, which *is* the information.
+
+For a Gaussian with known $$\sigma$$ and unknown mean $$\mu$$, the score is $$(y - \mu)/\sigma^2$$, so
+
+$$I(\mu) = \frac{\operatorname{Var}(Y)}{\sigma^4} = \frac{1}{\sigma^2}$$
+
+Noisier data means a *smaller* score variance and *less* information. A larger score variance means the log-likelihood reacts strongly to where the data landed, which is exactly what makes the data informative.
+
+## Checking it numerically
+
+{% include figure.html path="assets/img/blog/fisher-information/fig-02.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Left: the score at the true mean has variance 1/σ², so the low-noise case (σ = 1) has nine times the information of σ = 3. Middle: log-likelihood curves from five datasets of 20 points each; low noise gives sharp peaks near the true μ = 0, high noise gives flat curves whose peaks wander. Right: for a coin, the variance of the estimated bias over 100,000 simulated runs sits on the Cramér–Rao bound." %}
+
+The left panel samples 200,000 points for each $$\sigma$$ and computes the score at the true mean. The empirical variances come out at 1.002 and 0.111, against 1 and 1/9 from the formula.
+
+The middle panel is the curvature view of the same fact. With $$\sigma = 1$$ every dataset gives a narrow log-likelihood peaked near zero. With $$\sigma = 3$$ the curves are flat and their maxima drift, so the data cannot tell you where $$\mu$$ is.
+
+## What information buys you: the Cramér–Rao bound
+
+Fisher information sets a floor on how well any unbiased estimator can do:
+
+$$\operatorname{Var}(\hat\theta) \ge \frac{1}{n I(\theta)}$$
+
+The inverse relationship lives here: more information, lower achievable **estimator** variance. I suspect that is where my original confusion came from.
+
+## Back to the coin
+
+For a single toss with bias $$p$$, the score is $$y/p - (1-y)/(1-p)$$ and the information works out to
+
+$$I(p) = \frac{1}{p(1-p)}$$
+
+This is smallest at $$p = 0.5$$. So a fair coin is the *hardest* coin to pin down: with 100 tosses the standard error of $$\hat p$$ is 0.05 at $$p = 0.5$$ but about 0.022 at $$p = 0.05$$. Each toss of a heavily biased coin is more surprising when it goes against the bias, and that surprise is information. The right panel confirms it: the simulated variance of $$\hat p = \text{heads}/n$$ matches $$p(1-p)/n$$ across the whole range, so for the coin the simple frequency estimate is as good as any unbiased estimator can be.
+
+## Code
 
 ```python
 import numpy as np
-import matplotlib.pyplot as plt
 
-range_min = -10
-range_max = 10
-num_points = 20
+rng = np.random.default_rng(0)
 
-x_values = np.linspace(range_min, range_max, num_points)
+# Gaussian with known sigma: the variance of the score at the true mean is 1/sigma^2
+mu = 0.0
+for sigma in (1.0, 3.0):
+    y = rng.normal(mu, sigma, 200_000)
+    score = (y - mu) / sigma**2
+    print(f"sigma={sigma}: Var(score)={score.var():.3f}, 1/sigma^2={1 / sigma**2:.3f}")
 
-variance1 = 10
-variance2 = 25
-
-fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 10))
-
-
-for i, x in enumerate(x_values):
-    log_likelihood1 = -0.5 * \
-        np.log(2 * np.pi * variance1) - ((x - x_values) ** 2) / (2 * variance1)
-    log_likelihood2 = -0.5 * \
-        np.log(2 * np.pi * variance2) - ((x - x_values) ** 2) / (2 * variance2)
-    score1 = (x - x_values) / variance1
-    score2 = (x - x_values) / variance2
-
-    ax1.plot(x_values, log_likelihood1, label=f"Observation Point {i+1}")
-    ax2.plot(x_values, log_likelihood2, label=f"Observation Point {i+1}")
-    ax3.plot(x_values, score1, label=f"Observation Point {i+1}")
-    ax4.plot(x_values, score2, label=f"Observation Point {i+1}")
-
-ax1.set_xlabel("Observation")
-ax1.set_ylabel("Log-Likelihood")
-ax1.set_title(f"Log-Likelihood for Variance {variance1}")
-ax1.grid()
-ax1.set_ylim([-10, 0])  # set y-limits
-
-ax2.set_xlabel("Observation")
-ax2.set_ylabel("Log-Likelihood")
-ax2.set_title(f"Log-Likelihood for Variance {variance2}")
-ax2.grid()
-ax2.set_ylim([-10, 0])  # set y-limits
-
-ax3.set_xlabel("Observation")
-ax3.set_ylabel("Score")
-ax3.set_title(f"Score for Variance {variance1}")
-ax3.grid()
-ax3.set_ylim([-3, 4])
-ax4.set_xlabel("Observation")
-ax4.set_ylabel("Score")
-ax4.set_title(f"Score for Variance {variance2}")
-ax4.grid()
-ax4.set_ylim([-3, 4])
-
-plt.show()
+# Coin: the variance of the MLE meets the Cramer-Rao bound p(1-p)/n
+n = 100
+for p in (0.05, 0.5):
+    p_hat = rng.binomial(n, p, 100_000) / n
+    print(f"p={p}: Var(p_hat)={p_hat.var():.5f}, bound={p * (1 - p) / n:.5f}")
 ```
-
-{% include figure.html path="assets/img/blog/fisher-information/fig-01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-
-We see that in the case of less variance the score matrix is more varied and hence contains more information about the true mean. We can also see from the log likliehood graphs that a lower variance is showing us that most points in our sample peak at zero indicating its the true mean wheareas a higher variance does not easily tell us where the peak us. 
-
-To make it more intuitive, in our previous example if we can crudely say that when the results follow a 'pattern' and the results are less varied we actually have more information about the biasing.

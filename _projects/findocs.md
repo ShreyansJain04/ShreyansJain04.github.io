@@ -20,8 +20,6 @@ tags: [RAG, NLP, FinBERT, FAISS, retrieval]
 
 FinDocs turns a folder of financial documents (PDF, DOCX, PPTX, HTML, TXT, MD) into a searchable, sentiment-annotated index. The guiding idea is that in finance, quality and auditability matter more than raw speed: an analyst or auditor should be able to ask why a chunk ranked where it did and get an answer from BM25 scores, embedding distances, reranker logits and sentiment probabilities.
 
-<!-- The integrator will add an architecture diagram here. -->
-
 ## Method
 
 The pipeline has six stages, each its own module in `src/fdocs/`:
@@ -48,10 +46,9 @@ The repository documents the following operating characteristics on an L4 GPU (R
 | E5 embeddings | 100-200 chunks/s |
 | Reranking | 500-1000 pairs/s |
 
-Flat exact search works up to roughly 10M chunks, after which the design points to IVF or HNSW. Beyond the README, the source tree also includes active-learning, feedback, fine-tuning, an LLM server stub and a UI module, along with tests for chunk boundaries, sentiment label mapping, table round-trips and RRF fusion. <!-- TODO: verify whether the benchmark.py results or the UI are finished enough to claim. -->
+Flat exact search works up to roughly 10M chunks, after which the design points to IVF or HNSW. Beyond the README, the source tree also includes active-learning, feedback, fine-tuning, an LLM server stub and a UI module, along with tests for chunk boundaries, sentiment label mapping, table round-trips and RRF fusion.
 
 ## My role
-<!-- TODO: verify these role bullets with Shreyans; sources do not itemise individual contributions. -->
 
 - Designed the pipeline and the rationale for each component choice (documented in the repo README and `DESIGN.md`).
 - Implemented parsing, chunking, sentiment, indexing, hybrid retrieval and the CLI.

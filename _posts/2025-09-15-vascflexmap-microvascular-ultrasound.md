@@ -9,7 +9,6 @@ related_posts: false
 toc:
   sidebar: left
 ---
-<!-- Date approximate: manuscript in preparation, no public preprint. Numbers taken from the project page / manuscript figures. -->
 
 Ultrasound is cheap, portable and safe, but it's blurry. Its resolution is limited by diffraction to roughly half a wavelength, a few hundred microns at clinical frequencies, so the smallest vessels in an organ simply blur together. **Ultrasound localization microscopy (ULM)** gets round this, and resolves vessels below 50 µm. But it asks for things a normal scanner can't give.
 

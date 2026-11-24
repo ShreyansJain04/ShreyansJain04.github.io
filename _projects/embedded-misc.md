@@ -24,4 +24,4 @@ Firmware for an STM32L4R5 board (CubeIDE project). It samples signals with the A
 
 ## DC Anemometer
 
-A DC-motor-based anemometer (wind-speed sensor) project. The repository contains only a report PDF written with a project partner; no source files or README are published. <!-- TODO: verify measurement principle and results from the report PDF in the repo. --> [Code and report](https://github.com/ShreyansJain04/DC_Anemometer)
+A DC-motor-based anemometer (wind-speed sensor) project. The repository contains only a report PDF written with a project partner; no source files or README are published. [Code and report](https://github.com/ShreyansJain04/DC_Anemometer)

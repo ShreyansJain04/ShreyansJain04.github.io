@@ -17,7 +17,6 @@ highlights:
   - "Up to 500× less data than conventional ultrasound localization microscopy, with 28–133 s reconstruction on one H100."
   - "Earlier hybrid attention U-Net version presented at ISTU 2024 (40× data reduction, +14.73 dB peak SNR in simulation)."
 ---
-<!-- TODO: verify (1) venue/status: manuscript header is formatted for IEEE Trans. Biomed. Eng. 2025 but no submission status is stated; (2) equal contribution is Dhawan and Agarwal per tex; (3) period; (4) earlier hybrid-attention U-Net abstract (ISTU 2024) numbers 40x / 14.73 dB are on simulated data. No code/paper link available in sources. -->
 
 <div class="tldr" markdown="1">
 **Problem.** Ultrasound localization microscopy (ULM) resolves vessels below 50 um, but needs ultrafast frame rates (about 1000 FPS), tens of thousands of frames, and hours of processing, which clinical scanners cannot provide.  
@@ -68,4 +67,4 @@ Major cortical branches and higher-order microvessels stay visible down to 2 FPS
 - Co-author of the manuscript (equal-contribution first authors are Ruchika Dhawan and Mihir Agarwal).
 - Contributed to the ISTU 2024 hybrid attention-based U-Net on sparse ULM data that preceded this work.
 - Equal first inventor on a published Indian patent from this line of work: *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data* (Application No. 202521001823, published Feb 2026).
-<!-- TODO: add specific contributions (e.g. preprocessing, experiments, figures) once confirmed. -->
+

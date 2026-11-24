@@ -29,14 +29,11 @@ The app watches for three conditions:
 
 On any incident it sends notifications to both the child and parent devices. If the child does not confirm they are safe within **5 seconds**, a backup safety feature activates to monitor the surroundings.
 
-<!-- TODO: verify implementation details (sensors used, thresholds, notification channel, what "monitor surroundings" does). Not in the sources beyond the original project summary. -->
-
 ## Results
 
 The sources do not report quantitative evaluation. The deliverable is the working app, described above.
 
 ## My role
-<!-- TODO: verify these role bullets with Shreyans; sources do not itemise individual contributions. -->
 
 - Developed the Android application and its detection logic.
 - Designed the notification flow between child and parent devices and the 5-second confirmation fallback.

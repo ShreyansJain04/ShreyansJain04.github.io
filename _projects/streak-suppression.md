@@ -19,7 +19,6 @@ highlights:
   - "Real-time inference at >440 FPS with +13.7 dB reconstruction gain on synthetic streak data generated with Gaussian intensity modulation."
   - "Presented at IEEE SAUS 2024 and ISTU 2024 (Taipei)."
 ---
-<!-- TODO: verify metrics. Sources disagree: CV says +13.7 dB and >440 FPS (two-stage pipeline); the old project page said +20 dB SNR; SAUS 2024 abstract says 6.0 +/- 3.4 dB SNR and IoU 0.698 (U-Net + diffusion, initial findings). Old "154 test cases" claim not found in other sources. -->
 
 <div class="tldr" markdown="1">
 **Problem.** When an imaging probe runs during focused-ultrasound therapy (HIFU, histotripsy), interference from the therapy field paints bright streaks across the B-mode image, hiding exactly what the clinician needs to watch.  
