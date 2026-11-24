@@ -67,6 +67,11 @@
     - "AIR 3 across 40,000 candidates in IMU-CET 2022."
     - "Research Consultant position and cash prize from WorldQuant for achieving a top rank in the IITGN Alphathon."
 
+- title: Patents
+  type: list
+  contents:
+    - "A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data. R. Dhawan, M. Agarwal, S. Jain, R. H. Viraj, H. Shekhar. Patent application filed through IIT Gandhinagar."
+
 - title: Selected Projects
   type: time_table
   contents:

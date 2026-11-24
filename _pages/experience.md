@@ -39,6 +39,7 @@ nav_order: 2
     <li><b>BubbleSeg:</b> CNN segmentation of histotripsy bubble clouds with a combined Dice-Focal loss.</li>
     <li><b>VascFlexMap:</b> transformer-decoder network for microvascular ultrasound imaging at low frame rates.</li>
     <li>Two presentations at <b>ISTU 2024</b> (Taipei) and one at <b>IEEE SAUS 2024</b>.</li>
+    <li><b>Patent filed</b> as co-inventor: <i>A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data</i>.</li>
   </ul>
   <div class="project-links"><a class="btn-link-pill" href="/projects/streak-suppression/"><i class="fas fa-folder-open"></i> Streak suppression</a><a class="btn-link-pill" href="/projects/bubbleseg/"><i class="fas fa-folder-open"></i> BubbleSeg</a><a class="btn-link-pill" href="/projects/vascflexmap/"><i class="fas fa-folder-open"></i> VascFlexMap</a></div>
 </div>
