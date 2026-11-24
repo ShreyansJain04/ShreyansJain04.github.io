@@ -1,0 +1,119 @@
+% Compile with XeLaTeX
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,left=1.45cm,right=1.45cm,top=1.15cm,bottom=1.0cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Inter}[RawFeature={-calt},UprightFont=* Light, BoldFont=* SemiBold, ItalicFont=* Light Italic, BoldItalicFont=* SemiBold Italic]
+\newfontfamily\heavy{Inter}[RawFeature={-calt},UprightFont=* Bold]
+\newfontfamily\medium{Inter}[RawFeature={-calt},UprightFont=* Medium, ItalicFont=* Medium Italic]
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{accent}{HTML}{0B5CAD}
+\definecolor{muted}{HTML}{5F6368}
+\definecolor{rule}{HTML}{C9D3DD}
+\color{ink}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{1.08}
+
+\titleformat{\section}{\fontsize{10}{12}\selectfont\heavy\color{accent}}{}{0pt}{\addfontfeature{LetterSpace=8}\MakeUppercase}[{\vspace{-4pt}\color{rule}\rule{\linewidth}{0.7pt}}]
+\titlespacing*{\section}{0pt}{8pt}{3.5pt}
+\setlist[itemize]{leftmargin=0.95em,topsep=1.5pt,itemsep=1.2pt,parsep=0pt,label={\color{muted}\textbullet},before=\raggedright}
+
+% \job{Org}{right: place/date}{Role}{right: advisor}
+\newcommand{\job}[4]{%
+  {\medium #1}\hfill{\color{muted}#2}\par
+  \vspace{-0.5pt}{\color{muted}\itshape #3}\hfill{\color{muted}\small #4}\par}
+\newcommand{\gap}{\vspace{4.5pt}}
+\newcommand{\sep}{\enspace{\color{rule}|}\enspace}
+
+\begin{document}
+\fontsize{9.4}{11.6}\selectfont
+
+% ---------- header ----------
+\begin{minipage}[b]{0.62\linewidth}
+{\heavy\fontsize{24}{26}\selectfont Shreyans Jain}\\[3pt]
+{\medium\fontsize{10.5}{13}\selectfont\color{accent} Machine Learning \sep Quantitative Execution \sep Computer Vision}
+\end{minipage}%
+\begin{minipage}[b]{0.38\linewidth}\raggedleft\small\color{muted}
+\href{mailto:shreyans.jain@alumni.iitgn.ac.in}{shreyans.jain@alumni.iitgn.ac.in}\\
+\href{https://shreyansjain04.github.io}{shreyansjain04.github.io}\\
+\href{https://github.com/ShreyansJain04}{GitHub}\sep\href{https://www.linkedin.com/in/shreyans-jain-1b56aa247}{LinkedIn}\sep\href{https://scholar.google.com/citations?user=e153ofkAAAAJ}{Scholar}\sep Mumbai
+\end{minipage}
+\vspace{2pt}
+
+% ---------- education ----------
+\section{Education}
+\job{Indian Institute of Technology Gandhinagar}{2022 -- 2026}{B.Tech, Electrical Engineering, Minor in Artificial Intelligence}{CPI 8.85 / 10}
+\vspace{2pt}
+{\color{muted}\small Class XII (CBSE): 96\% \quad·\quad Class X: 10/10 CGPA \quad·\quad Dean's List: Semesters I, II, IV}
+
+% ---------- experience ----------
+\section{Experience}
+\job{Barclays}{Mumbai \;·\; 2026 -- Present}{BIIC Graduate, Cash Equities Execution}{}
+\begin{itemize}
+  \item Applying machine learning and algorithms to equity execution, working with execution quant researchers.
+\end{itemize}
+\gap
+\job{KrishiMandir}{Dec 2023 -- Mar 2024}{AI Engineer}{}
+\begin{itemize}
+  \item ConvNeXt few-shot classifier: \textbf{99.2\% accuracy on 55 classes} from 4 images each; replaced the OCR pipeline.
+\end{itemize}
+
+% ---------- research ----------
+\section{Research}
+\job{Purdue University}{West Lafayette, USA \;·\; May -- Jul 2025}{Research Intern}{Prof.\ Dharmendra Saraswat \& Prof.\ Vaneet Aggarwal}
+\begin{itemize}
+  \item Built \textbf{GeoTutor}, an LLM tutor for GIS on a hybrid RAG pipeline (BM25 + dense retrieval + cross-encoder reranking).
+  \item Learner-memory model for personalised plans, misconception detection and SuperMemo-2 reviews.
+\end{itemize}
+\gap
+\job{Indian Institute of Science (IISc)}{Bangalore \;·\; May -- Nov 2024}{Research Intern}{Prof.\ Prathosh A.P.}
+\begin{itemize}
+  \item \textbf{Variational Diffusion Unlearning}: erases classes and styles from diffusion models using only forget-data.
+  \item \textbf{71.6\% unlearning rate} on CIFAR-10 with \textbf{10$\times$ better u-FID} than baselines. Published in \textbf{TMLR 2026}.
+\end{itemize}
+\gap
+\job{MUSE Lab, IIT Gandhinagar}{Dec 2023 -- 2026}{Undergraduate Researcher, Medical Ultrasound}{Prof.\ Himanshu Shekhar}
+\begin{itemize}
+  \item Real-time streak-artifact suppression for therapy ultrasound: \textbf{440+ FPS}, \textbf{+13.7 dB}; now a published patent.
+  \item Histotripsy bubble-cloud segmentation (mean IoU 0.838) and low-frame-rate microvascular imaging, with UChicago.
+\end{itemize}
+\gap
+\job{CVIG Lab, IIT Gandhinagar}{Feb -- Nov 2024}{Undergraduate Researcher, Computer Vision}{Prof.\ Shanmuganathan Raman}
+\begin{itemize}
+  \item \textbf{WavShadow}: wavelet-based shadow removal; state of the art on ISTD (1.38 BER) and DESOBA (36.7 PSNR).
+\end{itemize}
+
+% ---------- achievements ----------
+\section{Achievements}
+\begin{itemize}
+  \item \textbf{Silver Medal, Inter-IIT Tech Meet 14.0} (ISRO) \,--\, \textbf{Team Lead}, satellite-imagery natural-language interface (GeoNLI).
+  \item \textbf{Silver Medal, Inter-IIT Tech Meet 13.0} (Adobe) \,--\, \textbf{Team Lead}, AI-image detection; highest accuracy of all IITs.
+  \item \textbf{Top 0.1\%, Amazon ML Challenge 2024} \,--\, rank 52 of $\sim$80,000 teams.
+  \item \textbf{WorldQuant} Research Consultant offer and cash prize for a top rank in the IITGN Alphathon.
+  \item Winner, HackRush CTF (IITGN) \sep 2nd, Undergraduate Research Showcase (120+) \sep Sailing: National Squad
+\end{itemize}
+
+% ---------- publications ----------
+\section{Publications \& Patents}
+\begin{itemize}
+  \item \emph{Unlearning in Diffusion Models under Data Constraints: A Variational Inference Approach}. \textbf{TMLR} 2026.
+  \item \emph{WavShadow: Wavelet Based Shadow Segmentation and Removal}. \textbf{ICVGIP} 2024 (first author).
+  \item Three papers on ultrasound artifact suppression and super-resolution at \textbf{ISTU 2024} (Taipei) and \textbf{IEEE SAUS 2024}.
+  \item Two published Indian patents in ultrasound imaging, \textbf{equal first inventor} (Nos.\ 202621026094, 202521001823).
+\end{itemize}
+
+% ---------- skills / leadership ----------
+\section{Skills \& Leadership}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+{\medium Languages} & Python, C++, SQL \\
+{\medium ML \& Tools} & PyTorch, TensorFlow, NumPy, Pandas, OpenCV, FAISS, FastAPI, Docker, Git, GCP \\
+{\medium Leadership} & TA, Probability \& Statistics (200+ students) \sep ML Club Secretary \sep TEDx IITGN Sponsorship Lead \\
+\end{tabularx}
+
+\end{document}

@@ -1,147 +1,161 @@
 - title: General Information
   type: map
   contents:
-    - name: Full Name
-      value: Shreyans Jain
-    - name: Status
-      value: BIIC Graduate, Barclays (Mumbai) · B.Tech Electrical Engineering, IIT Gandhinagar (2026)
-    - name: Email
-      value: shreyans.jain@alumni.iitgn.ac.in
-    - name: Institute
-      value: Indian Institute of Technology Gandhinagar (IIT Gandhinagar)
-
+  - name: Full Name
+    value: Shreyans Jain
+  - name: Current
+    value: BIIC Graduate, Barclays (Mumbai), cash equities execution
+  - name: Education
+    value: B.Tech Electrical Engineering (Minor in AI), IIT Gandhinagar, 2026
+  - name: Email
+    value: shreyans.jain@alumni.iitgn.ac.in
 - title: Education
   type: time_table
   contents:
-    - title: B.Tech., Electrical Engineering (Minor in AI)
-      institution: IIT Gandhinagar
-      year: 2022 – 2026
-      description:
-        - "CPI: 8.85/10"
-    - title: Class XII (Physics, Chemistry, Maths)
-      institution: Maa Bharti Sr. Sec. School
-      year: 2021 – 2022
-      description:
-        - "Score: 96/100"
-    - title: Class X
-      institution: FIITJEE World School, Secunderabad
-      year: 2019 – 2020
-      description:
-        - "Score: 10/10"
-
+  - title: B.Tech., Electrical Engineering (Minor in AI)
+    institution: IIT Gandhinagar
+    year: 2022 – 2026
+    description:
+    - 'CPI: 8.85/10'
+  - title: Class XII (Physics, Chemistry, Maths)
+    institution: Maa Bharti Sr. Sec. School
+    year: 2021 – 2022
+    description:
+    - 'Score: 96/100'
+  - title: Class X
+    institution: FIITJEE World School, Secunderabad
+    year: 2019 – 2020
+    description:
+    - 'Score: 10/10'
+- title: Experience
+  type: time_table
+  contents:
+  - title: BIIC Graduate
+    institution: Barclays, Mumbai (Cash Equities)
+    year: 2026 – Present
+    description:
+    - Applying machine learning and algorithmic methods to equity execution, working with execution quantitative researchers.
+  - title: AI Engineer
+    institution: KrishiMandir
+    year: Dec '23 – Mar '24
+    description:
+    - Built a ConvNeXt image classifier reaching 99.2% accuracy on 55 classes from only 4 images per class; it replaced the company's OCR-based system.
+    - Built a visual similarity search system (96% accuracy) and benchmarked open-source LLMs and RAG pipelines for function calling.
 - title: Research Experience
   type: time_table
   contents:
-    - title: Research Intern
-      institution: "Purdue University (Advisors: Prof. Dharmendra Saraswat, Prof. Vaneet Agarwal)"
-      year: May '25 – Jul '25
-      description:
-        - "Designed and implemented GeoTutor, an intelligent tutoring system for personalized GIS education, integrating a hybrid Retrieval-Augmented Generation (RAG) pipeline (BM25 + dense retrieval + cross-encoder reranking) grounded in Large Language Models (LLMs) and prompt engineering for accurate, context-aware responses."
-        - "Built an adaptive pedagogical engine with a learner memory model to generate personalized learning plans, detect conceptual errors, and schedule reviews using the SuperMemo-2 spaced repetition algorithm."
-    - title: Summer Intern
-      institution: "Indian Institute of Science (IISc), Bangalore (Advisor: Prof. Prathosh A.P.)"
-      year: May '24 – Nov '24
-      description:
-        - "Engineered a novel unlearning framework (VDU) for diffusion models (DDPM, Stable Diffusion) by formulating it as a variational inference problem, approximating the retrained posterior using only the images to forget."
-        - "Achieved a 71.6% unlearning rate (PUL) on CIFAR-10 while improving sample quality (u-FID) by over 10x compared to baseline methods, using a novel stability regularizer to prevent catastrophic forgetting."
-
-- title: Industry Experience
-  type: time_table
-  contents:
-    - title: BIIC Graduate
-      institution: Barclays, Mumbai
-      year: 2026 – Present
-      description:
-        - "Applying machine learning and algorithmic methods to equity execution (cash equities)."
-    - title: AI Engineer
-      institution: "KrishiMandir (Advisors: Mr. Sumeet Mohanty, Mr. Noel Kurien)"
-      year: Dec '23 – Mar '24
-      description:
-        - "Developed an image classifier using ConvNeXt models with robust data augmentation, achieving 99.2% accuracy in classifying 55 classes despite having only 4 images per class initially, replacing the company's OCR-based systems."
-
-- title: Competitions & Awards
+  - title: Research Intern
+    institution: 'Purdue University, USA (Advisors: Prof. Dharmendra Saraswat, Prof. Vaneet Aggarwal)'
+    year: May '25 – Jul '25
+    description:
+    - Designed and implemented GeoTutor, an intelligent tutoring system for personalized GIS education, integrating a hybrid Retrieval-Augmented Generation (RAG) pipeline (BM25 + dense retrieval + cross-encoder reranking) grounded in Large Language Models (LLMs) and prompt engineering for accurate, context-aware responses.
+    - Built an adaptive pedagogical engine with a learner memory model to generate personalized learning plans, detect conceptual errors, and schedule reviews using the SuperMemo-2 spaced repetition algorithm.
+  - title: Research Intern
+    institution: 'Indian Institute of Science (IISc), Bangalore (Advisor: Prof. Prathosh A.P.)'
+    year: May '24 – Nov '24
+    description:
+    - Engineered a novel unlearning framework (VDU) for diffusion models (DDPM, Stable Diffusion) by formulating it as a variational inference problem, approximating the retrained posterior using only the images to forget.
+    - Achieved a 71.6% unlearning rate (PUL) on CIFAR-10 while improving sample quality (u-FID) by over 10x compared to baseline methods, using a novel stability regularizer to prevent catastrophic forgetting. Published in TMLR 2026.
+  - title: Undergraduate Researcher, MUSE Lab
+    institution: 'IIT Gandhinagar (Advisor: Prof. Himanshu Shekhar, with Prof. Kenneth Bader, UChicago)'
+    year: Dec '23 – 2026
+    description:
+    - 'Real-time streak-artifact suppression for therapy-guidance ultrasound: two-stage U-Net + Fourier-attention U-Net running at >440 FPS with a +13.7 dB reconstruction gain; led to a published patent.'
+    - Histotripsy bubble-cloud segmentation (EfficientNet U-Net, Dice-Focal loss, mean IoU 0.838) and low-frame-rate microvascular imaging.
+  - title: Undergraduate Researcher
+    institution: 'IIT Gandhinagar (Advisor: Prof. Shanmuganathan Raman)'
+    year: Feb '24 – Nov '24
+    description:
+    - 'WavShadow: wavelet-based shadow segmentation and removal; state-of-the-art 1.38 BER on ISTD and 36.7 PSNR on DESOBA. Published at ICVGIP 2024.'
+- title: Publications
   type: list
   contents:
-    - "Silver Medal, Inter-IIT Tech Meet 14.0, GeoNLI: Geospatial Natural Language Interface (ISRO problem statement), Team 58."
-    - "Silver Medal, Inter-IIT Tech Meet 13.0 (IIT Bombay), Computer Vision problem statement by Adobe Research, competing against teams from all 23 IITs."
-    - "Rank 52 of ~80,000 teams (top 0.1%), Amazon ML Challenge 2024."
-    - "Dean's List, Semesters I, II and IV, IIT Gandhinagar."
-    - "HackRush (IITGN): Winner of the Capture-the-Flag challenge; 1st among first-years in the ML challenge."
-    - "Selected for the National Squad in Sailing."
-    - "2nd position at the Undergraduate Research Showcase at IIT Gandhinagar (out of 120+ presenters)."
-    - "AIR 3 across 40,000 candidates in IMU-CET 2022."
-    - "Research Consultant position and cash prize from WorldQuant for achieving a top rank in the IITGN Alphathon."
-    - "Devika & Prashant Nadkarni Scholarship (Rs. 1,00,000), AY 2024-25, for an international research internship."
-    - "Sailing: represented India at the India International Sailing Regatta, Chennai; Best Helm, NDA Inland Enterprise Championship; Most Promising Sailor, Hyderabad Sailing Week (Laser 4.7)."
-
+  - 'S. Panda, V. M S, S. Jain, S. K. Maharana, P. A.P. Unlearning in Diffusion Models under Data Constraints: A Variational Inference Approach. TMLR, 2026. (Earlier version: NeurIPS 2024 Workshop on Safe Generative AI.)'
+  - 'S. Jain, V. Vekaria, K. Gandhi, A. Arora. WavShadow: Wavelet Based Shadow Segmentation and Removal. ICVGIP, 2024.'
+  - S. Jain, M. Agarwal, R. Dhawan, N. Mistry, H. Shekhar. Suppressing Streak Artifacts in Ultrasound Images during Therapy Guidance by a Hybrid U-Net and Enhanced Masked Autoencoder. ISTU, 2024.
+  - M. Agarwal, S. Jain, R. Dhawan, N. Mistry, H. Shekhar. Suppressing Streak Artifacts Generated by the Interference of Imaging and Therapy Fields. IEEE SAUS, 2024.
+  - R. Dhawan, M. Agarwal, S. Jain, H. Ruparel, H. Shekhar. Reconstruction of Ultrasound Super-Resolution Images using a Hybrid Attention-based U-Net applied to Sparse Data. ISTU, 2024.
 - title: Patents
   type: list
   contents:
-    - "A Real-Time Ultrasound Image Processing System and a Method Thereof. Indian Patent Application No. 202621026094, filed Mar 2026, published Apr 2026 (equal first inventor)."
-    - "A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data. R. Dhawan, M. Agarwal, S. Jain, R. H. Viraj, H. Shekhar. Indian Patent Application No. 202521001823, filed Jan 2025, published Feb 2026 (equal first inventor)."
-
+  - A Real-Time Ultrasound Image Processing System and a Method Thereof. Indian Patent Application No. 202621026094, filed Mar 2026, published Apr 2026 (equal first inventor).
+  - A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data. R. Dhawan, M. Agarwal, S. Jain, R. H. Viraj, H. Shekhar. Indian Patent Application No. 202521001823, filed Jan 2025, published Feb 2026 (equal first inventor).
+- title: Competitions & Awards
+  type: list
+  contents:
+  - Silver Medal, Inter-IIT Tech Meet 14.0 (ISRO problem statement, GeoNLI), as team lead of a 6-member team.
+  - Silver Medal, Inter-IIT Tech Meet 13.0 (Adobe Research problem statement), as team lead; highest accuracy among all IITs (99.21% on CIFAKE).
+  - Rank 52 of ~80,000 teams (top 0.1%), Amazon ML Challenge 2024.
+  - Dean's List, Semesters I, II and IV, IIT Gandhinagar.
+  - 'HackRush (IITGN): Winner of the Capture-the-Flag challenge; 1st among first-years in the ML challenge.'
+  - Selected for the National Squad in Sailing.
+  - 2nd position at the Undergraduate Research Showcase at IIT Gandhinagar (out of 120+ presenters).
+  - AIR 3 across 40,000 candidates in IMU-CET 2022.
+  - Research Consultant position and cash prize from WorldQuant for achieving a top rank in the IITGN Alphathon.
+  - Devika & Prashant Nadkarni Scholarship (Rs. 1,00,000), AY 2024-25, for an international research internship.
+  - 'Sailing: represented India at the India International Sailing Regatta, Chennai; Best Helm, NDA Inland Enterprise Championship; Most Promising Sailor, Hyderabad Sailing Week (Laser 4.7).'
 - title: Selected Projects
   type: time_table
   contents:
-    - title: AI-Generated Image Detection
-      institution: Inter-IIT Tech Meet 13.0, problem statement by Adobe Research
-      year: Nov '24 – Dec '24
-      description:
-        - "LeViT with Neighboring Pixel Representation (NPR); 99.21% accuracy on CIFAKE, 1st in accuracy among 22 IITs."
-    - title: Shadow Segmentation and Removal
-      institution: Prof. Shanmuganathan Raman
-      year: Feb '24 – Nov '24
-      description:
-        - "End-to-end wavelet-based framework; state-of-the-art 1.38 BER on ISTD and 36.7 PSNR on DESOBA."
-    - title: Real-Time Artifact Suppression in Ultrasound Imaging
-      institution: Prof. Himanshu Shekhar
-      year: Dec '23 – Jul '24
-      description:
-        - "Two-stage U-Net and Fourier-Attention U-Net framework; real-time inference (>440 FPS) with +13.7 dB reconstruction gain."
-
+  - title: AI-Generated Image Detection
+    institution: Inter-IIT Tech Meet 13.0, problem statement by Adobe Research
+    year: Nov '24 – Dec '24
+    description:
+    - LeViT with Neighboring Pixel Representation (NPR); 99.21% accuracy on CIFAKE, 1st in accuracy among 22 IITs.
+  - title: Shadow Segmentation and Removal
+    institution: Prof. Shanmuganathan Raman
+    year: Feb '24 – Nov '24
+    description:
+    - End-to-end wavelet-based framework; state-of-the-art 1.38 BER on ISTD and 36.7 PSNR on DESOBA.
+  - title: Real-Time Artifact Suppression in Ultrasound Imaging
+    institution: Prof. Himanshu Shekhar
+    year: Dec '23 – Jul '24
+    description:
+    - Two-stage U-Net and Fourier-Attention U-Net framework; real-time inference (>440 FPS) with +13.7 dB reconstruction gain.
 - title: Technical Skills
   type: map
   contents:
-    - name: Tools
-      value: Git, Docker, GCP, Verilog
-    - name: Programming Languages & Libraries
-      value: Python, C++, MySQL, PyTorch, NumPy, Pandas, Matplotlib, TensorFlow, OpenCV
-
+  - name: Languages
+    value: Python, C++, SQL
+  - name: ML & data
+    value: PyTorch, TensorFlow, NumPy, Pandas, OpenCV, FAISS, Matplotlib
+  - name: Tools
+    value: Git, Docker, GCP, FastAPI, Verilog, LaTeX
 - title: Positions of Responsibility & Teaching
   type: time_table
   contents:
-    - title: Team Lead, Inter-IIT Tech Meet 13.0 (Adobe Research problem statement)
-      institution: IIT Gandhinagar contingent
-      year: "2024"
-      description:
-        - "Built the team and set the approach; highest accuracy among all IITs and a silver medal."
-    - title: Team Lead, Inter-IIT Tech Meet 14.0 (GeoNLI)
-      institution: IIT Gandhinagar contingent
-      year: "2025"
-      description:
-        - "Led a 6-member team to a silver medal; set technical direction, managed budget and compute, led the final presentation."
-    - title: Co-Licensee & Sponsorship Lead, TEDxIITGandhinagar
-      institution: IIT Gandhinagar
-      year: 2023 – 2024
-      description:
-        - "Secured the event's first-ever sponsorship; led a 70+ member team to a full-house event with 8 speakers."
-    - title: Machine Learning Club Secretary
-      institution: IIT Gandhinagar
-      year: Aug '24 – Apr '25
-      description:
-        - "Organized hackathons, led bi-weekly ML sessions, and mentored club members."
-    - title: Teaching Assistant, ES114 – Probability, Statistics & Data Visualization
-      institution: IIT Gandhinagar
-      year: Jan '25 – Apr '25
-      description:
-        - "Designed labs, graded 200+ students, held office hours, and delivered a guest lecture to 400+."
-    - title: Student Guide
-      institution: IIT Gandhinagar
-      year: Two consecutive years
-      description:
-        - "Mentored incoming first-year students through the transition to college."
-    - title: Peer Reviewer
-      institution: Biomedical Signal Processing and Control (Elsevier)
-      year: "2026"
-      description:
-        - "Reviewed manuscripts for the journal."
+  - title: Team Lead, Inter-IIT Tech Meet 13.0 (Adobe Research problem statement)
+    institution: IIT Gandhinagar contingent
+    year: '2024'
+    description:
+    - Built the team and set the approach; highest accuracy among all IITs and a silver medal.
+  - title: Team Lead, Inter-IIT Tech Meet 14.0 (GeoNLI)
+    institution: IIT Gandhinagar contingent
+    year: '2025'
+    description:
+    - Led a 6-member team to a silver medal; set technical direction, managed budget and compute, led the final presentation.
+  - title: Co-Licensee & Sponsorship Lead, TEDxIITGandhinagar
+    institution: IIT Gandhinagar
+    year: 2023 – 2024
+    description:
+    - Secured the event's first-ever sponsorship; led a 70+ member team to a full-house event with 8 speakers.
+  - title: Machine Learning Club Secretary
+    institution: IIT Gandhinagar
+    year: Aug '24 – Apr '25
+    description:
+    - Organized hackathons, led bi-weekly ML sessions, and mentored club members.
+  - title: Teaching Assistant, ES114 – Probability, Statistics & Data Visualization
+    institution: IIT Gandhinagar
+    year: Jan '25 – Apr '25
+    description:
+    - Designed labs, graded 200+ students, held office hours, and delivered a guest lecture to 400+.
+  - title: Student Guide
+    institution: IIT Gandhinagar
+    year: Two consecutive years
+    description:
+    - Mentored incoming first-year students through the transition to college.
+  - title: Peer Reviewer
+    institution: Biomedical Signal Processing and Control (Elsevier)
+    year: '2026'
+    description:
+    - Reviewed manuscripts for the journal.
