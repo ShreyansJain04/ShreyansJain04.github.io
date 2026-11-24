@@ -1,112 +1,119 @@
+% Compile with XeLaTeX
 \documentclass[10pt,a4paper]{article}
-\usepackage[a4paper,margin=1.5cm,top=1.3cm,bottom=1.3cm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{charter}
+\usepackage[a4paper,left=1.45cm,right=1.45cm,top=1.15cm,bottom=1.0cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Inter}[UprightFont=* Light, BoldFont=* SemiBold, ItalicFont=* Light Italic, BoldItalicFont=* SemiBold Italic]
+\newfontfamily\heavy{Inter}[UprightFont=* Bold]
+\newfontfamily\medium{Inter}[UprightFont=* Medium, ItalicFont=* Medium Italic]
+\usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
-\definecolor{accent}{HTML}{1F4E79}
+
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{accent}{HTML}{0B5CAD}
+\definecolor{muted}{HTML}{5F6368}
+\definecolor{rule}{HTML}{C9D3DD}
+\color{ink}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\linespread{1.03}
+\linespread{1.08}
 
-\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{\MakeUppercase}[\vspace{-3pt}\color{accent}\rule{\linewidth}{0.6pt}]
-\titlespacing*{\section}{0pt}{7pt}{4pt}
-\setlist[itemize]{leftmargin=1.1em,topsep=1pt,itemsep=0.5pt,parsep=0pt,label=\textbullet}
+\titleformat{\section}{\fontsize{10}{12}\selectfont\heavy\color{accent}}{}{0pt}{\addfontfeature{LetterSpace=8}\MakeUppercase}[{\vspace{-4pt}\color{rule}\rule{\linewidth}{0.7pt}}]
+\titlespacing*{\section}{0pt}{8pt}{3.5pt}
+\setlist[itemize]{leftmargin=0.95em,topsep=1.5pt,itemsep=1.2pt,parsep=0pt,label={\color{muted}\textbullet},before=\raggedright}
 
-\newcommand{\entry}[4]{%
-  \textbf{#1}\hfill #3\\
-  \textit{#2}\hfill\textit{#4}\par\vspace{1pt}}
-\newcommand{\me}{\textbf{S.~Jain}}
+% \job{Org}{right: place/date}{Role}{right: advisor}
+\newcommand{\job}[4]{%
+  {\medium #1}\hfill{\color{muted}#2}\par
+  \vspace{-0.5pt}{\color{muted}\itshape #3}\hfill{\color{muted}\small #4}\par}
+\newcommand{\gap}{\vspace{4.5pt}}
+\newcommand{\sep}{\enspace{\color{rule}|}\enspace}
 
 \begin{document}
+\fontsize{9.4}{11.6}\selectfont
 
-\begin{center}
-{\LARGE\bfseries Shreyans Jain}\\[3pt]
-BIIC Graduate, Barclays (Mumbai) \;·\; B.Tech Electrical Engineering, IIT Gandhinagar (2026)\\[2pt]
-\href{mailto:shreyans.jain@alumni.iitgn.ac.in}{shreyans.jain@alumni.iitgn.ac.in} \;·\;
-\href{https://shreyansjain04.github.io}{shreyansjain04.github.io} \;·\;
-\href{https://github.com/ShreyansJain04}{GitHub} \;·\;
-\href{https://www.linkedin.com/in/shreyans-jain-1b56aa247}{LinkedIn} \;·\; \href{https://scholar.google.com/citations?user=e153ofkAAAAJ}{Google Scholar}
-\end{center}
-\vspace{-6pt}
+% ---------- header ----------
+\begin{minipage}[b]{0.62\linewidth}
+{\heavy\fontsize{24}{26}\selectfont Shreyans Jain}\\[3pt]
+{\medium\fontsize{10.5}{13}\selectfont\color{accent} Machine Learning \sep Quantitative Execution \sep Computer Vision}
+\end{minipage}%
+\begin{minipage}[b]{0.38\linewidth}\raggedleft\small\color{muted}
+\href{mailto:shreyans.jain@alumni.iitgn.ac.in}{shreyans.jain@alumni.iitgn.ac.in}\\
+\href{https://shreyansjain04.github.io}{shreyansjain04.github.io}\\
+\href{https://github.com/ShreyansJain04}{GitHub}\sep\href{https://www.linkedin.com/in/shreyans-jain-1b56aa247}{LinkedIn}\sep\href{https://scholar.google.com/citations?user=e153ofkAAAAJ}{Scholar}\sep Mumbai
+\end{minipage}
+\vspace{2pt}
 
+% ---------- education ----------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}X l r@{}}
-\textbf{B.Tech, Electrical Engineering (Minor in AI)}, IIT Gandhinagar & 2022 -- 2026 & CPI 8.85/10\\
-Class XII (PCM), Maa Bharti Sr.\ Sec.\ School & 2021 -- 2022 & 96\%\\
-Class X, FIITJEE World School, Secunderabad & 2019 -- 2020 & 10/10\\
-\end{tabularx}
+\job{Indian Institute of Technology Gandhinagar}{2022 -- 2026}{B.Tech, Electrical Engineering, Minor in Artificial Intelligence}{CPI 8.85 / 10}
+\vspace{2pt}
+{\color{muted}\small Class XII (CBSE): 96\% \quad·\quad Class X: 10/10 CGPA \quad·\quad Dean's List: Semesters I, II, IV}
 
+% ---------- experience ----------
 \section{Experience}
-\entry{BIIC Graduate}{Barclays, Mumbai -- Cash Equities}{2026 -- Present}{}
+\job{Barclays}{Mumbai \;·\; 2026 -- Present}{BIIC Graduate, Cash Equities Execution}{}
 \begin{itemize}
-  \item Applying machine learning and algorithmic methods to equity execution, working with execution quantitative researchers.
+  \item Applying machine learning and algorithms to equity execution, working with execution quant researchers.
 \end{itemize}
-\vspace{2pt}
-\entry{AI Engineer}{KrishiMandir}{Dec 2023 -- Mar 2024}{}
+\gap
+\job{KrishiMandir}{Dec 2023 -- Mar 2024}{AI Engineer}{}
 \begin{itemize}
-  \item Built a ConvNeXt image classifier reaching \textbf{99.2\% accuracy on 55 classes} from only 4 images per class; replaced the company's OCR-based system.
-  \item Built a visual similarity search system (96\% accuracy); benchmarked open-source LLMs and RAG pipelines for function calling.
-\end{itemize}
-
-\section{Research Experience}
-\entry{Research Intern -- Purdue University, USA}{Prof.\ Dharmendra Saraswat \& Prof.\ Vaneet Aggarwal}{May 2025 -- Jul 2025}{}
-\begin{itemize}
-  \item Built \textbf{GeoTutor}, an LLM tutoring system for GIS education on a hybrid RAG pipeline (BM25 + dense retrieval + cross-encoder reranking), with a FastAPI/FAISS backend.
-  \item Designed an adaptive engine with a learner-memory model that plans lessons, detects conceptual errors and schedules reviews (SuperMemo-2).
-\end{itemize}
-\vspace{2pt}
-\entry{Research Intern -- IISc Bangalore}{Prof.\ Prathosh A.P.}{May 2024 -- Nov 2024}{}
-\begin{itemize}
-  \item Developed \textbf{Variational Diffusion Unlearning}: removes classes and styles from DDPM / Stable Diffusion using only the data to forget, framed as variational inference.
-  \item \textbf{71.6\% unlearning rate} on CIFAR-10 with \textbf{$>$10$\times$ better u-FID} than baselines via a stability regularizer. Published in \textbf{TMLR 2026}.
-\end{itemize}
-\vspace{2pt}
-\entry{Undergraduate Researcher -- MUSE Lab, IIT Gandhinagar}{Prof.\ Himanshu Shekhar, with Prof.\ Kenneth Bader (UChicago)}{Dec 2023 -- 2026}{}
-\begin{itemize}
-  \item Real-time streak-artifact suppression for therapy-guidance ultrasound: two-stage U-Net + Fourier-attention U-Net, \textbf{$>$440 FPS}, \textbf{+13.7 dB} reconstruction gain. Led to a published patent.
-  \item Histotripsy bubble-cloud segmentation (EfficientNet U-Net, Dice-Focal loss, mean IoU 0.838); low-frame-rate microvascular imaging.
-\end{itemize}
-\vspace{2pt}
-\entry{Undergraduate Researcher -- IIT Gandhinagar}{Prof.\ Shanmuganathan Raman}{Feb 2024 -- Nov 2024}{}
-\begin{itemize}
-  \item \textbf{WavShadow}: wavelet-based shadow segmentation and removal; state-of-the-art \textbf{1.38 BER on ISTD} and \textbf{36.7 PSNR on DESOBA}. Published at ICVGIP 2024.
+  \item ConvNeXt few-shot classifier: \textbf{99.2\% accuracy on 55 classes} from 4 images each; replaced the OCR pipeline.
 \end{itemize}
 
+% ---------- research ----------
+\section{Research}
+\job{Purdue University}{West Lafayette, USA \;·\; May -- Jul 2025}{Research Intern}{Prof.\ Dharmendra Saraswat \& Prof.\ Vaneet Aggarwal}
+\begin{itemize}
+  \item Built \textbf{GeoTutor}, an LLM tutor for GIS on a hybrid RAG pipeline (BM25 + dense retrieval + cross-encoder reranking).
+  \item Learner-memory model for personalised plans, misconception detection and SuperMemo-2 reviews.
+\end{itemize}
+\gap
+\job{Indian Institute of Science (IISc)}{Bangalore \;·\; May -- Nov 2024}{Research Intern}{Prof.\ Prathosh A.P.}
+\begin{itemize}
+  \item \textbf{Variational Diffusion Unlearning}: erases classes and styles from diffusion models using only forget-data.
+  \item \textbf{71.6\% unlearning rate} on CIFAR-10 with \textbf{10$\times$ better u-FID} than baselines. Published in \textbf{TMLR 2026}.
+\end{itemize}
+\gap
+\job{MUSE Lab, IIT Gandhinagar}{Dec 2023 -- 2026}{Undergraduate Researcher, Medical Ultrasound}{Prof.\ Himanshu Shekhar}
+\begin{itemize}
+  \item Real-time streak-artifact suppression for therapy ultrasound: \textbf{440+ FPS}, \textbf{+13.7 dB}; now a published patent.
+  \item Histotripsy bubble-cloud segmentation (mean IoU 0.838) and low-frame-rate microvascular imaging, with UChicago.
+\end{itemize}
+\gap
+\job{CVIG Lab, IIT Gandhinagar}{Feb -- Nov 2024}{Undergraduate Researcher, Computer Vision}{Prof.\ Shanmuganathan Raman}
+\begin{itemize}
+  \item \textbf{WavShadow}: wavelet-based shadow removal; state of the art on ISTD (1.38 BER) and DESOBA (36.7 PSNR).
+\end{itemize}
+
+% ---------- achievements ----------
+\section{Achievements}
+\begin{itemize}
+  \item \textbf{Silver Medal, Inter-IIT Tech Meet 14.0} (ISRO) \,--\, \textbf{Team Lead}, satellite-imagery natural-language interface (GeoNLI).
+  \item \textbf{Silver Medal, Inter-IIT Tech Meet 13.0} (Adobe) \,--\, \textbf{Team Lead}, AI-image detection; highest accuracy of all IITs.
+  \item \textbf{Top 0.1\%, Amazon ML Challenge 2024} \,--\, rank 52 of $\sim$80,000 teams.
+  \item \textbf{WorldQuant} Research Consultant offer and cash prize for a top rank in the IITGN Alphathon.
+  \item Winner, HackRush CTF (IITGN) \sep 2nd, Undergraduate Research Showcase (120+) \sep Sailing: National Squad
+\end{itemize}
+
+% ---------- publications ----------
 \section{Publications \& Patents}
 \begin{itemize}
-  \item S.~Panda, V.~M~S, \me, S.~K.~Maharana, P.~A.P. Unlearning in Diffusion Models under Data Constraints: A Variational Inference Approach. \textit{TMLR}, 2026. (Earlier version: NeurIPS 2024 Workshop on Safe Generative AI.)
-  \item \me, V.~Vekaria, K.~Gandhi, A.~Arora. WavShadow: Wavelet Based Shadow Segmentation and Removal. \textit{ICVGIP}, 2024.
-  \item \me, M.~Agarwal, R.~Dhawan, N.~Mistry, H.~Shekhar. Suppressing Streak Artifacts in Ultrasound Images during Therapy Guidance by a Hybrid U-Net and Enhanced Masked Autoencoder. \textit{ISTU}, 2024.
-  \item M.~Agarwal, \me, R.~Dhawan, N.~Mistry, H.~Shekhar. Suppressing Streak Artifacts Generated by the Interference of Imaging and Therapy Fields. \textit{IEEE SAUS}, 2024.
-  \item R.~Dhawan, M.~Agarwal, \me, H.~Ruparel, H.~Shekhar. Reconstruction of Ultrasound Super-Resolution Images using a Hybrid Attention-based U-Net applied to Sparse Data. \textit{ISTU}, 2024.
-  \item \textbf{Patent:} A Real-Time Ultrasound Image Processing System and a Method Thereof. Indian Patent App.\ 202621026094, published Apr 2026 (equal first inventor).
-  \item \textbf{Patent:} A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data. Indian Patent App.\ 202521001823, published Feb 2026 (equal first inventor).
+  \item \emph{Unlearning in Diffusion Models under Data Constraints: A Variational Inference Approach}. \textbf{TMLR} 2026.
+  \item \emph{WavShadow: Wavelet Based Shadow Segmentation and Removal}. \textbf{ICVGIP} 2024 (first author).
+  \item Three papers on ultrasound artifact suppression and super-resolution at \textbf{ISTU 2024} (Taipei) and \textbf{IEEE SAUS 2024}.
+  \item Two published Indian patents in ultrasound imaging, \textbf{equal first inventor} (Nos.\ 202621026094, 202521001823).
 \end{itemize}
 
-\section{Competitions \& Awards}
-\begin{itemize}
-  \item \textbf{Silver Medal, Inter-IIT Tech Meet 14.0} (ISRO, GeoNLI) as \textbf{team lead} of 6: natural-language grounding, captioning and VQA on satellite imagery.
-  \item \textbf{Silver Medal, Inter-IIT Tech Meet 13.0} (Adobe Research) as \textbf{team lead}: AI-generated image detection, highest accuracy among all IITs (99.21\% on CIFAKE).
-  \item \textbf{Rank 52 of $\sim$80,000 teams} (top 0.1\%), Amazon ML Challenge 2024.
-  \item Research Consultant offer and cash prize from \textbf{WorldQuant} for a top rank in the IITGN Alphathon.
-  \item HackRush (IITGN): winner, Capture-the-Flag; 1st among first-years in the ML challenge. \;·\; Dean's List, Semesters I, II and IV.
-  \item 2nd, Undergraduate Research Showcase, IITGN (120+ presenters). \;·\; Nadkarni Scholarship (Rs.\ 1 lakh) for international research.
-  \item AIR 3 of 40,000, IMU-CET 2022. \;·\; Sailing: National Squad; represented India at the India International Sailing Regatta.
-\end{itemize}
-
-\section{Skills}
-\textbf{Languages:} Python, C++, SQL \;·\; \textbf{ML:} PyTorch, TensorFlow, NumPy, Pandas, OpenCV, FAISS \;·\; \textbf{Tools:} Git, Docker, GCP, FastAPI, Verilog, \LaTeX
-
-\section{Leadership \& Teaching}
-\begin{itemize}
-  \item Teaching Assistant, ES114 Probability, Statistics \& Data Visualization (Jan--Apr 2025): designed labs, graded 200+ students, guest lecture to 400+.
-  \item Secretary, Machine Learning Club, IITGN (2024--25) \;·\; Co-Licensee \& Sponsorship Lead, TEDxIITGandhinagar: secured its first sponsorship, led a 70+ member team.
-  \item Peer reviewer, \textit{Biomedical Signal Processing and Control} (Elsevier), 2026 \;·\; Student Guide, two years.
-\end{itemize}
+% ---------- skills / leadership ----------
+\section{Skills \& Leadership}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+{\medium Languages} & Python, C++, SQL \\
+{\medium ML \& Tools} & PyTorch, TensorFlow, NumPy, Pandas, OpenCV, FAISS, FastAPI, Docker, Git, GCP \\
+{\medium Leadership} & TA, Probability \& Statistics (200+ students) \sep ML Club Secretary \sep TEDx IITGN Sponsorship Lead \\
+\end{tabularx}
 
 \end{document}
