@@ -114,6 +114,6 @@ The limitations are real:
 
 ULM's insight is that you can beat the resolution limit by accumulating many sparse observations. VascFlexMap asks how far a learned prior can stand in for some of those observations. On this data, the answer is: far enough to recover the vessel tree from 2 FPS and a few hundred frames, as long as you accept vessels about three times wider. For a clinical scanner that can't do 1,000 FPS, that's a trade worth having.
 
-This line of work is also the subject of a patent application filed through IIT Gandhinagar, *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data*.
+This line of work is also covered by an Indian patent on which I'm an equal first inventor: *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data* (Application No. 202521001823, filed January 2025, published February 2026).
 
 **Links:** [Project page](/projects/vascflexmap/) · Manuscript in preparation

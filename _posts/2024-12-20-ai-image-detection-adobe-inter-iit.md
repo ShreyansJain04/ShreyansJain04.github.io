@@ -10,7 +10,7 @@ toc:
   sidebar: left
 ---
 
-Inter-IIT Tech Meet 13.0, held at IIT Bombay, included a computer-vision problem statement from **Adobe Research**: detect AI-generated images, then explain *why* an image looks fake. Our team (Team 64, IIT Gandhinagar) won a **Silver Medal**, with the highest detection accuracy among all IITs. This post goes through what we built, why each piece was there, and, with some hindsight, which parts held up.
+Inter-IIT Tech Meet 13.0, held at IIT Bombay, included a computer-vision problem statement from **Adobe Research**: detect AI-generated images, then explain *why* an image looks fake. I led our team (Team 64, IIT Gandhinagar), which I put together from the ML Club, and we won a **Silver Medal** with the highest detection accuracy among all IITs. This post goes through what we built, why each piece was there, and, with some hindsight, which parts held up.
 
 The short version is on the [project page]({{ '/projects/ai-image-detection/' | relative_url }}), and the code is [on GitHub](https://github.com/ShreyansJain04/AI-Image-Detection-Artifact-Identification).
 
