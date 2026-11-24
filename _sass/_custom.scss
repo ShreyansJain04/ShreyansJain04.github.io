@@ -117,3 +117,61 @@ html[data-theme='dark'] .role-pill { color: #6ee7b7; }
     .ach-sub { font-size: .82rem; color: var(--global-text-color-light); } } }
 .course-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 1.5rem;
   span { font-size: .8rem; padding: .2rem .6rem; border-radius: 6px; background: var(--global-code-bg-color); } }
+
+// ---------- home page (hero, proof strip, featured, timeline) ----------
+.home-hero {
+  display: grid; grid-template-columns: 1fr 220px; gap: 2.5rem; align-items: center;
+  padding: 2.5rem 0 2rem;
+  .hh-eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--global-theme-color); margin-bottom: .6rem; }
+  .hh-name { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 800; line-height: 1.05; letter-spacing: -.02em; margin: 0 0 1rem; }
+  .hh-lead { font-size: 1.15rem; line-height: 1.6; color: var(--global-text-color-light); max-width: 34rem; margin-bottom: 1.5rem;
+    strong { color: var(--global-text-color); font-weight: 600; } }
+  .hh-ctas { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .hh-btn { display: inline-flex; align-items: center; gap: .45rem; padding: .6rem 1.15rem; border-radius: 8px;
+    font-weight: 600; font-size: .95rem; border: 1px solid var(--global-divider-color);
+    color: var(--global-text-color) !important; transition: all .15s ease;
+    &:hover { border-color: var(--global-theme-color); color: var(--global-theme-color) !important; text-decoration: none; }
+    &.primary { background: var(--global-theme-color); border-color: var(--global-theme-color); color: #fff !important;
+      &:hover { filter: brightness(1.08); color: #fff !important; } } }
+  .hh-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+}
+@media (max-width: 720px) {
+  .home-hero { grid-template-columns: 1fr; gap: 1.25rem; padding-top: 1.5rem;
+    .hh-photo { order: -1; img { width: 120px; border-radius: 50%; } } }
+}
+.home-proof {
+  display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color); margin: .5rem 0 2.5rem;
+  .hp-item { padding: 1.1rem 1rem; border-left: 1px solid var(--global-divider-color); &:first-child { border-left: none; padding-left: 0; } }
+  .hp-big { font-size: 1.5rem; font-weight: 800; line-height: 1.1; margin-bottom: .3rem; }
+  .hp-label { font-size: .82rem; line-height: 1.4; color: var(--global-text-color-light); }
+}
+@media (max-width: 720px) {
+  .home-proof { grid-template-columns: repeat(2, 1fr);
+    .hp-item { padding: .9rem .75rem; &:nth-child(odd) { border-left: none; padding-left: 0; }
+      &:nth-child(n+3) { border-top: 1px solid var(--global-divider-color); } } }
+}
+.home-h2 { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  font-size: 1.4rem; font-weight: 700; margin: 2.25rem 0 1rem; text-transform: none;
+  .home-more { font-size: .88rem; font-weight: 500; white-space: nowrap; } }
+.home-featured { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1rem; }
+@media (max-width: 640px) { .home-featured { grid-template-columns: 1fr; } }
+.hf-card { display: block; border: 1px solid var(--global-divider-color); border-radius: 12px; overflow: hidden;
+  color: var(--global-text-color) !important; transition: transform .15s ease, box-shadow .15s ease;
+  &:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,.14); text-decoration: none;
+    .hf-thumb img { transform: scale(1.04); } }
+  .hf-thumb { aspect-ratio: 16 / 9; overflow: hidden; background: var(--global-code-bg-color);
+    img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; } }
+  .hf-body { padding: .9rem 1rem 1.1rem; }
+  .hf-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+    color: var(--global-theme-color); margin-bottom: .3rem; }
+  .hf-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .3rem; }
+  .hf-blurb { font-size: .88rem; line-height: 1.5; color: var(--global-text-color-light); }
+}
+.home-timeline { margin: .25rem 0 1rem;
+  .ht-row { display: flex; gap: 1rem; padding: .45rem 0; border-bottom: 1px solid var(--global-divider-color); font-size: .95rem; }
+  .ht-when { flex: 0 0 5.5rem; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+}
+.post .clearfix h2 { font-size: 1.4rem; font-weight: 700; margin-top: 2.25rem; }

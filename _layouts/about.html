@@ -4,6 +4,51 @@ layout: default
 
 <!-- about.html -->
       <div class="post">
+        {% if page.hero -%}
+        <section class="home-hero">
+          <div class="hh-text">
+            {% if page.hero.eyebrow %}<p class="hh-eyebrow">{{ page.hero.eyebrow }}</p>{% endif %}
+            <h1 class="hh-name">{{ site.first_name }} {{ site.last_name }}</h1>
+            <p class="hh-lead">{{ page.hero.lead }}</p>
+            <div class="hh-ctas">
+              {% for c in page.hero.ctas -%}
+              <a class="hh-btn{% if c.primary %} primary{% endif %}" href="{{ c.url | relative_url }}">{% if c.icon %}<i class="{{ c.icon }}"></i>{% endif %}{{ c.label }}{% if c.primary %} <i class="fa-solid fa-arrow-right"></i>{% endif %}</a>
+              {%- endfor %}
+            </div>
+          </div>
+          {% if page.hero.image -%}
+          <div class="hh-photo">
+            <img src="{{ page.hero.image | prepend: 'assets/img/' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }}">
+          </div>
+          {%- endif %}
+        </section>
+
+        {% if page.proof -%}
+        <section class="home-proof">
+          {% for p in page.proof -%}
+          <div class="hp-item"><div class="hp-big">{{ p.big }}</div><div class="hp-label">{{ p.label }}</div></div>
+          {%- endfor %}
+        </section>
+        {%- endif %}
+
+        {% if page.featured -%}
+        <h2 class="home-h2">Featured work <a class="home-more" href="{{ '/projects/' | relative_url }}">All projects →</a></h2>
+        <section class="home-featured">
+          {% for f in page.featured -%}
+          <a class="hf-card" href="{{ f.url | relative_url }}">
+            <div class="hf-thumb"><img src="{{ f.img | relative_url }}" alt="{{ f.title }}" loading="lazy"></div>
+            <div class="hf-body">
+              {% if f.tag %}<span class="hf-tag">{{ f.tag }}</span>{% endif %}
+              <div class="hf-title">{{ f.title }}</div>
+              <div class="hf-blurb">{{ f.blurb }}</div>
+            </div>
+          </a>
+          {%- endfor %}
+        </section>
+        {%- endif %}
+
+        <article>
+        {%- else -%}
         <header class="post-header">
           <h1 class="post-title">
            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
@@ -36,6 +81,8 @@ layout: default
           </div>
           {%- endif %}
 
+          {%- endif %}
+
           <div class="clearfix">
             {{ content }}
           </div>
@@ -48,13 +95,13 @@ layout: default
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            <h2 class="home-h2">Latest posts <a class="home-more" href="{{ '/blog/' | relative_url }}">All posts →</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <h2 class="home-h2">Selected publications <a class="home-more" href="{{ '/publications/' | relative_url }}">All publications →</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
 
