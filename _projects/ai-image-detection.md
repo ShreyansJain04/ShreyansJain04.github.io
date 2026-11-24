@@ -76,5 +76,5 @@ Each ingredient helped: augmentation lifted LeViT-192 from 95.87% to 98.17%, and
 
 ## My role
 
-- Built the LeViT + NPR detection framework and the frequency augmentation pipeline (per my CV).
+- Team lead: assembled the team from the ML Club, set the technical direction, and built the LeViT + NPR detection framework and the frequency augmentation pipeline.
 - Continued with Adobe Research on out-of-distribution robustness, exploring adversarial training, jigsaw-style self-supervised learning and continual learning.

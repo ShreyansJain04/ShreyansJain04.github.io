@@ -64,9 +64,9 @@
   contents:
     - "Silver Medal, Inter-IIT Tech Meet 14.0, GeoNLI: Geospatial Natural Language Interface (ISRO problem statement), Team 58."
     - "Silver Medal, Inter-IIT Tech Meet 13.0 (IIT Bombay), Computer Vision problem statement by Adobe Research, competing against teams from all 23 IITs."
-    - "Rank 100 of ~80,000 teams (top 0.1%), Amazon ML Challenge 2024."
+    - "Rank 52 of ~80,000 teams (top 0.1%), Amazon ML Challenge 2024."
     - "Dean's List, Semesters I, II and IV, IIT Gandhinagar."
-    - "HackRush (IITGN): 1st among first-years in the ML challenge, 3rd in CTF."
+    - "HackRush (IITGN): Winner of the Capture-the-Flag challenge; 1st among first-years in the ML challenge."
     - "Selected for the National Squad in Sailing."
     - "2nd position at the Undergraduate Research Showcase at IIT Gandhinagar (out of 120+ presenters)."
     - "AIR 3 across 40,000 candidates in IMU-CET 2022."
@@ -110,6 +110,11 @@
 - title: Positions of Responsibility & Teaching
   type: time_table
   contents:
+    - title: Team Lead, Inter-IIT Tech Meet 13.0 (Adobe Research problem statement)
+      institution: IIT Gandhinagar contingent
+      year: "2024"
+      description:
+        - "Built the team and set the approach; highest accuracy among all IITs and a silver medal."
     - title: Team Lead, Inter-IIT Tech Meet 14.0 (GeoNLI)
       institution: IIT Gandhinagar contingent
       year: "2025"

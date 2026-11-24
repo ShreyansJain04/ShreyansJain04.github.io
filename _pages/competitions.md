@@ -25,7 +25,7 @@ nav_order: 3
 <div class="xp-item">
   <div class="xp-head"><span class="xp-role">Amazon ML Challenge 2024</span><span class="xp-date">2024</span></div>
   <div class="xp-org">National machine learning challenge</div>
-  <ul><li>Ranked <b>100th among ~80,000 teams</b> (top 0.1%).</li></ul>
+  <ul><li>Ranked <b>52nd among ~80,000 teams</b> (top 0.1%).</li></ul>
 </div>
 
 <div class="xp-item">
@@ -37,5 +37,5 @@ nav_order: 3
 <div class="xp-item">
   <div class="xp-head"><span class="xp-role">HackRush, IIT Gandhinagar's annual hackathon</span><span class="xp-date">2023</span></div>
   <div class="xp-org">Institute hackathon</div>
-  <ul><li><b>1st among first-year students</b> in the Machine Learning challenge and <b>3rd</b> in the Capture-the-Flag (CTF) security challenge.</li></ul>
+  <ul><li><b>1st among first-year students</b> in the Machine Learning challenge and <b>winner</b> of the Capture-the-Flag (CTF) security challenge.</li></ul>
 </div>

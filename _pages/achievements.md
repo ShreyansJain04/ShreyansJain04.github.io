@@ -11,14 +11,14 @@ nav_order: 6
 
 <div class="ach-grid">
   <div class="ach"><div class="ach-icon">🥈</div><div class="ach-title">Silver Medal, Inter-IIT Tech Meet 14.0</div><div class="ach-sub">Team lead, GeoNLI (ISRO problem statement), 2025</div></div>
-  <div class="ach"><div class="ach-icon">🥈</div><div class="ach-title">Silver Medal, Inter-IIT Tech Meet 13.0</div><div class="ach-sub">AI-generated image detection (Adobe Research), highest accuracy among IITs, 2024</div></div>
+  <div class="ach"><div class="ach-icon">🥈</div><div class="ach-title">Silver Medal, Inter-IIT Tech Meet 13.0</div><div class="ach-sub">Team lead, AI-generated image detection (Adobe Research), highest accuracy among IITs, 2024</div></div>
   <div class="ach"><div class="ach-icon">📄</div><div class="ach-title">TMLR 2026 publication</div><div class="ach-sub">Variational Diffusion Unlearning (IISc)</div></div>
   <div class="ach"><div class="ach-icon">🏅</div><div class="ach-title">2nd place, Undergraduate Research Showcase</div><div class="ach-sub">IIT Gandhinagar, 120+ presenters</div></div>
-  <div class="ach"><div class="ach-icon">🏆</div><div class="ach-title">Amazon ML Challenge 2024</div><div class="ach-sub">Rank 100 of ~80,000 teams (top 0.1%)</div></div>
+  <div class="ach"><div class="ach-icon">🏆</div><div class="ach-title">Amazon ML Challenge 2024</div><div class="ach-sub">Rank 52 of ~80,000 teams (top 0.1%)</div></div>
   <div class="ach"><div class="ach-icon">💼</div><div class="ach-title">WorldQuant Alphathon</div><div class="ach-sub">Top 20; Research Consultant offer and cash prize</div></div>
   <div class="ach"><div class="ach-icon">🎓</div><div class="ach-title">Dean's List</div><div class="ach-sub">Semesters I, II and IV, IIT Gandhinagar</div></div>
   <div class="ach"><div class="ach-icon">🎯</div><div class="ach-title">All-India Rank 3, IMU-CET 2022</div><div class="ach-sub">Among 40,000 candidates</div></div>
-  <div class="ach"><div class="ach-icon">💻</div><div class="ach-title">HackRush, IITGN</div><div class="ach-sub">1st among first-years (ML challenge), 3rd in CTF</div></div>
+  <div class="ach"><div class="ach-icon">💻</div><div class="ach-title">HackRush, IITGN</div><div class="ach-sub">Winner, Capture-the-Flag; 1st among first-years in the ML challenge</div></div>
   <div class="ach"><div class="ach-icon">🎓</div><div class="ach-title">Devika &amp; Prashant Nadkarni Scholarship</div><div class="ach-sub">₹1,00,000 for an international research internship, AY 2024-25</div></div>
   <div class="ach"><div class="ach-icon">📜</div><div class="ach-title">Two published Indian patents</div><div class="ach-sub">Ultrasound imaging, equal first inventor (2026)</div></div>
   <div class="ach"><div class="ach-icon">⛵</div><div class="ach-title">National Squad, Sailing</div><div class="ach-sub">Selected for the national sailing squad (2021); represented India at the India International Sailing Regatta, Chennai</div></div>
@@ -26,6 +26,12 @@ nav_order: 6
 </div>
 
 ## Positions of responsibility
+
+<div class="xp-item">
+  <div class="xp-head"><span class="xp-role">Team Lead, Inter-IIT Tech Meet 13.0 (Adobe Research problem)</span><span class="xp-date">2024</span></div>
+  <div class="xp-org">IIT Gandhinagar contingent</div>
+  <ul><li>Put the team together from the ML Club with no budget and set the approach (LeViT + Neighbouring Pixel Representation). We had the highest accuracy among all IITs and won a silver medal, IITGN's first ML medal at Inter-IIT in years. Adobe Research then invited the team to continue the work.</li></ul>
+</div>
 
 <div class="xp-item">
   <div class="xp-head"><span class="xp-role">Team Lead, Inter-IIT Tech Meet 14.0 (GeoNLI)</span><span class="xp-date">2025</span></div>

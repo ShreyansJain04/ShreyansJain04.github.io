@@ -23,9 +23,9 @@ Hi! I'm **Shreyans**. I work at **Barclays** in Mumbai, applying machine learnin
 My work has been published in **TMLR** and **ICVGIP**, and I am an equal first inventor on **two published Indian patents** in ultrasound imaging. My research has been with the [MUSE Lab](https://labs.iitgn.ac.in/muselaboratory/) (Prof. Himanshu Shekhar) on medical ultrasound, with Prof. Prathosh A.P. at **IISc Bangalore** on machine unlearning for diffusion models, with Prof. Shanmuganathan Raman on shadow removal, and at **Purdue University** on LLM-based tutoring for GIS education.
 
 <div class="highlights">
-  <div class="hl"><div class="hl-num">2× 🥈</div><div class="hl-label">Inter-IIT silver medals: led the 14.0 team, member of the 13.0 team</div></div>
+  <div class="hl"><div class="hl-num">2× 🥈</div><div class="hl-label">Inter-IIT silver medals: team lead at both 13.0 (Adobe) and 14.0 (ISRO)</div></div>
   <div class="hl"><div class="hl-num">TMLR</div><div class="hl-label">journal paper on diffusion unlearning, plus 4 conference papers &amp; talks</div></div>
-  <div class="hl"><div class="hl-num">Top 0.1%</div><div class="hl-label">Amazon ML Challenge 2024 (100 / 80k teams)</div></div>
+  <div class="hl"><div class="hl-num">Top 0.1%</div><div class="hl-label">Amazon ML Challenge 2024 (rank 52 / 80k teams)</div></div>
   <div class="hl"><div class="hl-num">99.21%</div><div class="hl-label">AI-image detection accuracy on CIFAKE</div></div>
 </div>
 
