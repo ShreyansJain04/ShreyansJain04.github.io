@@ -28,7 +28,7 @@ nav_order: 2
     <li>Reached a <b>71.6% unlearning rate</b> (PUL) on CIFAR-10 and improved sample quality (u-FID) by <b>over 10×</b> versus baselines, using a new stability regularizer that prevents catastrophic forgetting.</li>
     <li>Published in <b>TMLR 2026</b>, after a NeurIPS 2024 workshop paper.</li>
   </ul>
-  <div class="project-links"><span class="status-pill">TMLR 2026</span><a class="btn-link-pill" href="/projects/vdu/"><i class="fas fa-folder-open"></i> Project</a><a class="btn-link-pill" href="https://openreview.net/forum?id=mAHRgieyOV" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
+  <div class="project-links"><span class="status-pill">TMLR 2026</span><a class="btn-link-pill" href="/blog/2026/variational-diffusion-unlearning/"><i class="fas fa-folder-open"></i> Project</a><a class="btn-link-pill" href="https://openreview.net/forum?id=mAHRgieyOV" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
 </div>
 
 <div class="xp-item">
@@ -41,7 +41,7 @@ nav_order: 2
     <li>Two presentations at <b>ISTU 2024</b> (Taipei) and one at <b>IEEE SAUS 2024</b>.</li>
     <li><b>Two published Indian patents</b> as equal first inventor: <i>A Real-Time Ultrasound Image Processing System and a Method Thereof</i> (202621026094) and <i>A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data</i> (202521001823).</li>
   </ul>
-  <div class="project-links"><a class="btn-link-pill" href="/projects/streak-suppression/"><i class="fas fa-folder-open"></i> Streak suppression</a><a class="btn-link-pill" href="/projects/bubbleseg/"><i class="fas fa-folder-open"></i> BubbleSeg</a><a class="btn-link-pill" href="/projects/vascflexmap/"><i class="fas fa-folder-open"></i> VascFlexMap</a></div>
+  <div class="project-links"><a class="btn-link-pill" href="/blog/2024/realtime-streak-suppression-ultrasound/"><i class="fas fa-folder-open"></i> Streak suppression</a><a class="btn-link-pill" href="/blog/2025/bubbleseg-histotripsy-dice-focal/"><i class="fas fa-folder-open"></i> BubbleSeg</a><a class="btn-link-pill" href="/blog/2025/vascflexmap-microvascular-ultrasound/"><i class="fas fa-folder-open"></i> VascFlexMap</a></div>
 </div>
 
 <div class="xp-item">
@@ -51,7 +51,7 @@ nav_order: 2
     <li>Designed <b>WavShadow</b>, an end-to-end shadow segmentation and removal framework: Haar-wavelet features for segmentation, FFC blocks with MAE priors for removal.</li>
     <li>State-of-the-art <b>1.38 BER on ISTD</b> and <b>36.7 PSNR on DESOBA</b> (+0.7 over the 2023 state of the art).</li>
   </ul>
-  <div class="project-links"><span class="status-pill">ICVGIP 2024</span><a class="btn-link-pill" href="/projects/wavshadow/"><i class="fas fa-folder-open"></i> Project</a><a class="btn-link-pill" href="https://arxiv.org/abs/2411.05747" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
+  <div class="project-links"><span class="status-pill">ICVGIP 2024</span><a class="btn-link-pill" href="/blog/2024/wavshadow-shadow-removal/"><i class="fas fa-folder-open"></i> Project</a><a class="btn-link-pill" href="https://arxiv.org/abs/2411.05747" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a></div>
 </div>
 
 ## Industry

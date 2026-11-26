@@ -39,6 +39,35 @@ layout: default
     </p>
   </header>
 
+  {%- if page.project -%}
+  {%- assign proj_url = '/projects/' | append: page.project | append: '/' -%}
+  {%- assign proj = site.projects | where: "url", proj_url | first -%}
+  {%- if proj %}
+  <div class="project-facts">
+    <div class="entry-badges">
+      {%- if proj.status %}<span class="status-pill">{{ proj.status }}</span>{% endif -%}
+      {%- if proj.award %}<span class="badge-award small"><i class="fas fa-trophy"></i> {{ proj.award }}</span>{% endif -%}
+      {%- if proj.role %}<span class="role-pill">{{ proj.role }}</span>{% endif -%}
+    </div>
+    <div class="entry-meta">
+      {%- if proj.advisor %}<span><i class="fas fa-chalkboard-teacher"></i> {{ proj.advisor }}</span>{% endif -%}
+      {%- if proj.period %}<span><i class="far fa-calendar"></i> {{ proj.period }}</span>{% endif -%}
+      {%- if proj.team %}<span><i class="fas fa-users"></i> {{ proj.team }}</span>{% endif -%}
+    </div>
+    {%- assign l = proj.links -%}
+    {%- if l.paper or l.report or l.code or l.demo or l.poster %}
+    <div class="project-links">
+      {%- if l.paper %}<a class="btn-link-pill" href="{{ l.paper }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Paper</a>{% endif -%}
+      {%- if l.report %}<a class="btn-link-pill" href="{{ l.report }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Report</a>{% endif -%}
+      {%- if l.code %}<a class="btn-link-pill" href="{{ l.code }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif -%}
+      {%- if l.demo %}<a class="btn-link-pill" href="{{ l.demo }}" target="_blank" rel="noopener"><i class="fas fa-play-circle"></i> Demo</a>{% endif -%}
+      {%- if l.poster %}<a class="btn-link-pill" href="{{ l.poster | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-image"></i> Poster</a>{% endif -%}
+    </div>
+    {%- endif %}
+  </div>
+  {%- endif -%}
+  {%- endif %}
+
   <article class="post-content">
     {% if page.toc and page.toc.beginning %}
     <div id="table-of-contents">

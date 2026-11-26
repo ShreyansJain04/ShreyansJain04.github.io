@@ -44,6 +44,10 @@
     {%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
     {%- if page.og_image -%}
         {%- assign share_image = page.og_image | absolute_url -%}
+    {%- elsif page.project -%}
+        {%- assign proj_url = '/projects/' | append: page.project | append: '/' -%}
+        {%- assign proj = site.projects | where: "url", proj_url | first -%}
+        {%- if proj.img -%}{%- assign share_image = proj.img | relative_url | absolute_url -%}{%- else -%}{%- assign share_image = site.og_image -%}{%- endif -%}
     {%- elsif page.img -%}
         {%- assign share_image = page.img | relative_url | absolute_url -%}
     {%- else -%}
@@ -82,7 +86,7 @@
     {%- endif %}
 
     <!-- Twitter card -->
-    <meta name="twitter:card" content="{% if page.og_image or page.img %}summary_large_image{% else %}summary{% endif %}" />
+    <meta name="twitter:card" content="{% if share_image != site.og_image %}summary_large_image{% else %}summary{% endif %}" />
     <meta name="twitter:title" content="{{ full_title | strip_html | normalize_whitespace | escape }}" />
     <meta name="twitter:description" content="{{ meta_desc | escape }}" />
     {% if share_image -%}
