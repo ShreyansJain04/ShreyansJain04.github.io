@@ -8,7 +8,13 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: vdu
 ---
+<div class="tldr" markdown="1">
+**Problem.** Diffusion models can generate content you need to remove after training, such as a class or an artist's style. Retraining without that data is expensive, and most unlearning methods assume access to the full training set.  
+**Approach.** A one-step, data-constrained method that fine-tunes the model using **only the data to be forgotten**, with a loss derived from variational inference.  
+**Result.** High unlearning rates with far better image quality than the baselines on MNIST, CIFAR-10 and tinyImageNet, and style and object removal in Stable Diffusion. Published in **TMLR 2026**.
+</div>
 
 Suppose you have a trained diffusion model and you find out it can produce something it shouldn't: a copyrighted artist's style, a person's likeness, or just a class you no longer want it to generate. The clean fix is to retrain from scratch without that data. That is usually far too expensive, and often impossible, because you no longer have the full training set.
 
@@ -127,4 +133,10 @@ $$\gamma$$ is the other control. At $$\gamma = 1$$ only the leash is active, so 
 
 The idea I find most satisfying here is the reframing: unlearning isn't "do gradient ascent and hope". Write down which posterior you actually want, see that Bayes' rule lets you reach it without the data you've lost, and let variational inference turn that into a loss. The two resulting terms, a push away from the forget set and a variance-weighted leash back to the original, explain both why the method works and where it breaks.
 
-**Links:** [TMLR paper (OpenReview)](https://openreview.net/forum?id=mAHRgieyOV) · [arXiv](https://arxiv.org/abs/2510.04058) · [Project page](/projects/vdu/)
+**Links:** [TMLR paper (OpenReview)](https://openreview.net/forum?id=mAHRgieyOV) · [arXiv](https://arxiv.org/abs/2510.04058)
+
+## My role
+
+- Worked on the variational formulation and the stability regularizer as a research intern (May–Nov 2024).
+- Ran class-unlearning experiments on DDPMs and the comparisons with the baselines.
+- Co-authored the NeurIPS 2024 Safe Generative AI workshop paper and the TMLR journal version.

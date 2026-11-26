@@ -28,7 +28,8 @@
     <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url}}"/>
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="canonical" href="{{ canonical }}">
+    {% if site.feed or site.plugins contains 'jekyll-feed' %}<link rel="alternate" type="application/atom+xml" title="{{ site.blog_name | default: title }}" href="{{ '/feed.xml' | absolute_url }}">{% endif %}
 
     <!-- Dark Mode -->
     {% if site.enable_darkmode %}

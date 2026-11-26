@@ -14,10 +14,11 @@ footer_text: >
 keywords: Shreyans Jain, IIT Gandhinagar, deep learning, medical ultrasound, computer vision, vision-language models, geospatial AI, Inter IIT
 
 
+title_tagline: ML, Computer Vision & Ultrasound Research
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🔬
 
-url: https://ShreyansJain04.github.io
+url: https://shreyansjain04.github.io
 baseurl:
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -64,7 +65,11 @@ max_width: 960px
 # Display links to the page with a preview object on social media.
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: https://ShreyansJain04.github.io/assets/img/prof_pic.jpg
+schema_person: # used for the Person structured data Google reads
+  works_for: Barclays
+  alumni_of: Indian Institute of Technology Gandhinagar
+  knows_about: [Deep learning, Computer vision, Medical ultrasound imaging, Vision-language models, Geospatial AI, Diffusion models]
+og_image: https://shreyansjain04.github.io/assets/img/prof_pic.jpg
 
 # -----------------------------------------------------------------------------
 # Social integration

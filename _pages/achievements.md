@@ -116,7 +116,7 @@ nav_order: 6
   <ul>
     <li><b><a href="https://github.com/plugyawn/wimpyML">wimpyML</a></b>: 14 commits of from-scratch optimizers (Adam, RMSProp, <code>wimpyOPT</code>); my RMSProp reaches 97.11% on MNIST vs 97.31% for <code>torch.optim.RMSprop</code>.</li>
     <li><b>JuliaLang/Microbenchmarks</b>: two pull requests (#77, #78) to speed up the <code>scale</code> benchmark and update the Fortran <code>matrix_statistics</code> benchmark.</li>
-    <li><b>Visualizations for ML</b>: 50+ interactive Streamlit tools and blogs for teaching ML. <a href="/projects/vis-ml/">Project →</a></li>
+    <li><b>Visualizations for ML</b>: 50+ interactive Streamlit tools and blogs for teaching ML. <a href="/blog/2024/visualizations-for-ml/">Project →</a></li>
   </ul>
 </div>
 

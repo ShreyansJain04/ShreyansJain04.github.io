@@ -8,9 +8,15 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: vis-ml
 ---
+<div class="tldr" markdown="1">
+**Problem.** Machine learning algorithms are hard to understand from equations alone.  
+**Approach.** For each concept, write a Quarto blog post with from-scratch code and build a Streamlit app where the reader can change parameters and watch the algorithm run. Done as a CS299 project advised by Prof. Nipun Batra.  
+**Result.** More than a dozen live blogs and Streamlit apps covering optimization, information theory and probability. The gallery below has the highlights.
+</div>
 
-Equations are a poor first contact with an algorithm. You can stare at the Adam update for an hour and still not know what changing $$\beta_2$$ does to the path of a ball rolling down a loss surface. In a CS299 project advised by Prof. [Nipun Batra](https://nipunbatra.github.io/), Vannsh Jani, Viraj Vekaria and I (with Kishan Ved on several topics) tried a different route: for each concept, write a blog post with from-scratch code, and build a small app so the reader can poke at it. This post collects what we built, what broke, and what we would do again. The project page is [here](/projects/vis-ml/).
+Equations are a poor first contact with an algorithm. You can stare at the Adam update for an hour and still not know what changing $$\beta_2$$ does to the path of a ball rolling down a loss surface. In a CS299 project advised by Prof. [Nipun Batra](https://nipunbatra.github.io/), Vannsh Jani, Viraj Vekaria and I (with Kishan Ved on several topics) tried a different route: for each concept, write a blog post with from-scratch code, and build a small app so the reader can poke at it. This post collects what we built, what broke, and what we would do again.
 
 ## The recipe
 
@@ -67,9 +73,39 @@ The app takes a transformation and shows how a small patch of space is stretched
 - **Validate against a reference.** Autodiff, optimizers and Huffman codes were all checked against PyTorch or a library before we put them in front of readers.
 - **Learning is the real output.** As the report notes, a lot of the early work on each task went into learning the concept before any visualization was possible.
 
+## Demo gallery
+
+Each card opens a live app or blog. All of them are listed on the [project Notion page](https://intensedrop.notion.site/Visualizations-for-ML-951994a20ee447268626a82e4659c41f).
+
+<div class="demo-grid">
+{% assign demos = "notion_adam.png|Adam optimizer: animated learning path|https://optiviz.streamlit.app/;notion_contour.png|Contour plots: updates after every epoch|https://sgdmomentum.streamlit.app/;notion_velocity.png|Velocity visualization for momentum|https://velocityviz.streamlit.app/;notion_optpath.png|Optimization path explorer|https://foptim.streamlit.app/;notion_cordic.png|CORDIC algorithm|https://cordic.streamlit.app/;notion_constraint.png|Constrained optimization (blog)|https://vannshjani.github.io/Blogs/posts/constraints.html;notion_compgraph.png|Computational graphs and autodiff (blog)|https://vannshjani.github.io/Blogs/posts/autodiff.html" | split: ";" %}
+{% for d in demos %}{% assign f = d | split: "|" %}
+  <a class="demo-card" href="{{ f[2] }}" target="_blank" rel="noopener">
+    <div class="demo-img"><img src="{{ '/assets/img/projects/vis-ml/' | append: f[0] | relative_url }}" alt="{{ f[1] }}" loading="lazy"></div>
+    <div class="demo-title">{{ f[1] }} <i class="fas fa-external-link-alt"></i></div>
+  </a>
+{% endfor %}
+</div>
+
+## All the apps
+
+| Topic | App | Authors |
+|---|---|---|
+| Fisher information | [fisher.streamlit.app](https://fisher.streamlit.app/) | Shreyans |
+| Huffman coding | [huffman.streamlit.app](https://huffman.streamlit.app/) | Kishan and Shreyans |
+| JPEG: coding the DCT matrix | [jpegcoding.streamlit.app](https://jpegcoding.streamlit.app/) | Kishan and Shreyans |
+| CORDIC algorithm | [cordic.streamlit.app](https://cordic.streamlit.app/) | Viraj and Shreyans |
+| Change of variables (Jacobian) | [changeofvariables.streamlit.app](https://changeofvariables.streamlit.app/) | Shreyans |
+| Noisy channel coding | [noisychannelcoding.streamlit.app](https://noisychannelcoding.streamlit.app/) | Vannsh |
+
+## My role
+
+- **Optimizers.** With Viraj, built the Streamlit app comparing SGD, Adam and RMSProp, plus the contour-plot momentum demo and the velocity app.
+- **Information theory.** With Kishan, the Huffman coding blog and app, and a Colab walk-through of the JPEG pipeline (YCbCr, chroma subsampling, DCT, quantization, Huffman).
+- **Maths concepts.** Blogs and apps on Fisher information and on change of variables with the Jacobian; with Viraj, the CORDIC app.
+
 ## Links
 
-- Project page: [Visualizations for Machine Learning](/projects/vis-ml/)
 - Full write-up: [project notion page](https://intensedrop.notion.site/Visualizations-for-ML-951994a20ee447268626a82e4659c41f)
 - Apps: [Fisher information](https://fisher.streamlit.app/), [Huffman](https://huffman.streamlit.app/), [JPEG coding](https://jpegcoding.streamlit.app/), [CORDIC](https://cordic.streamlit.app/), [change of variables](https://changeofvariables.streamlit.app/), [velocity viz](https://velocityviz.streamlit.app/), [noisy channel coding](https://noisychannelcoding.streamlit.app/)
 

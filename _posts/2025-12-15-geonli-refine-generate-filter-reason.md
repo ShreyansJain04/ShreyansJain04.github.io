@@ -8,13 +8,22 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: geonli
 ---
+<!-- Source conflicts resolved to the report values: CLIP threshold 0.25 (deck says 0.24); SAM3 fine-tuned for 1 epoch (deck says 3). Do not mention on the page. -->
+
+<div class="tldr" markdown="1">
+**Problem.** ISRO's Inter-IIT 14.0 problem asked for a natural-language interface to Earth-observation imagery: captioning, visual question answering (VQA) and oriented referring-expression grounding, over RGB, false-colour (FCC) and SAR inputs, using only open-source models that run offline.  
+**Approach.** A neuro-symbolic **Refine-Generate-Filter-Reason** pipeline: deterministic domain adaptation to a unified RGB, a fine-tuned SAM3 for oriented grounding, CLIP and NMS filtering, a VLM for final selection, and a router that sends numeric questions to a geometry engine.  
+**Result.** 31.3% Acc@0.7 for grounding on VRSBench (GeoChat: 19.9%). **Silver Medal**, second place on the leaderboard with 320.13 points behind IIT Delhi's 400.  
+**My role.** Team lead. I assembled the team, set the technical direction for every vertical, managed budget and GPU compute, and presented to the judges. I personally drove the SAM3-based grounding pipeline.
+</div>
 
 <!-- Source conflicts resolved to the report values: CLIP threshold 0.25 (deck says 0.24); SAM3 fine-tuned 1 epoch (deck says 3). Do not mention on the page. -->
 
 In December 2025 our six-person team (Team 58: Karan Gandhi, Laksh Jain, Romit Mohane, Shreyans Jain, Umang Shikarvar and Viraj Vekaria) took the Silver Medal on the ISRO problem statement at Inter-IIT Tech Meet 14.0. We finished second, with 320.13 points behind IIT Delhi's 400, and we did it using less than one-fifth of the compute the other top-5 teams used. Their budgets were roughly ₹1-2 lakh.
 
-I was the team lead. This post is the leadership and strategy story: how I picked the team, how we chose a direction, where we spent and did not spend compute, and what failed. The technical details are on the [project page]({{ '/projects/geonli/' | relative_url }}), and the code is at [Umang-Shikarvar/GeoNLI](https://github.com/Umang-Shikarvar/GeoNLI).
+I was the team lead. This post is the leadership and strategy story: how I picked the team, how we chose a direction, where we spent and did not spend compute, and what failed. The full technical details are in the [last section](#technical-details), and the code is at [Umang-Shikarvar/GeoNLI](https://github.com/Umang-Shikarvar/GeoNLI).
 
 ## The brief
 
@@ -111,4 +120,90 @@ I led the final presentation to the judges. The pipeline's stage-by-stage struct
 
 The biggest lesson was about leadership as much as modelling: pick one architectural idea, make every vertical serve it, and spend compute only where a model is genuinely needed.
 
-Full details are on the [GeoNLI project page]({{ '/projects/geonli/' | relative_url }}), and the code is on [GitHub](https://github.com/Umang-Shikarvar/GeoNLI).
+The code is on [GitHub](https://github.com/Umang-Shikarvar/GeoNLI).
+
+## Technical details
+
+The story above covers the decisions. This section is the reference: the full architecture, the remaining pipeline pieces and every number from the report.
+
+### System overview
+
+{% include figure.html path="assets/img/projects/geonli/report/slide_p02.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Full architecture: React dashboard, Vercel proxy and Flask server in front of domain adaptation and the captioning, VQA and grounding pipelines." %}
+
+### Domain adaptation
+
+A deterministic layer converts every input to RGB so that RGB-pretrained models work zero-shot. FCC images are converted to natural colour by synthesising the missing blue channel with a linear model over green, red and NIR (following Patra et al.), which avoids errors like reading red vegetation as fire. SAR images go through a Pix2Pix SAR-to-RGB generator. Real-ESRGAN is used only as a 4x sharpening step so small objects keep clean edges.
+
+### Query types
+
+{% include figure.html path="assets/img/projects/geonli/report/p10_2.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Four query types on one scene: spatial (leftmost plane), attribute (smallest plane), region (planes at the bottom) and relational (plane near the vehicle)." %}
+
+### Full results
+
+All numbers are on the official VRSBench validation split (9,350 images).
+
+**Grounding (Acc@IoU, %).**
+
+| Method | Unique @0.5 | Unique @0.7 | Non-Unique @0.5 | Non-Unique @0.7 | All @0.5 | All @0.7 |
+|---|---|---|---|---|---|---|
+| GeoChat w/o ft | 20.7 | 5.4 | 7.3 | 1.7 | 12.9 | 3.2 |
+| LLaVA-1.5 | 51.1 | 16.4 | 34.8 | 11.5 | 41.6 | 13.6 |
+| GeoChat | **57.4** | 22.6 | 44.5 | 18.0 | 49.8 | 19.9 |
+| **GeoNLI** | 52.5 | **30.0** | **55.0** | **32.5** | **53.8** | **31.3** |
+
+Strict-precision accuracy (Acc@0.7) is about double the strong VLM baselines, and the gain is largest on the non-unique (crowded) subset: 32.5% against 18.0% for GeoChat. GeoChat still wins the loose Unique Acc@0.5, so the advantage is precision and clutter handling, not everywhere.
+
+**Localisation quality (mIoU).**
+
+| Subset | mIoU |
+|---|---|
+| Unique | 42.60% |
+| Non-Unique | 42.28% |
+| **Overall** | **42.44%** |
+
+**VQA** (fine-tuned Qwen3-VL-8B baseline, without the router pipeline):
+
+| Metric | Value |
+|---|---|
+| Binary accuracy | 90.86 |
+| Semantic (BERT-BLEU) | 0.79 |
+| Numeric score | 0.56 |
+| MAE / RMSE | 0.73 / 1.41 |
+| Format failures | 0 |
+
+The 0.56 numeric score is why the deterministic engine exists: it replaces estimation with calculation. The report does not give separate numbers for the full hybrid pipeline.
+
+**Captioning:**
+
+| Method | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | BERTScore F1 |
+|---|---|---|---|---|---|---|
+| GeoChat w/o ft | 13.9 | 6.6 | 3.0 | 1.4 | 0.4 | - |
+| LLaVA-1.5 | 48.1 | 31.5 | 21.2 | **14.7** | **33.9** | - |
+| GeoChat | 46.7 | 30.2 | 20.1 | 13.8 | 28.2 | - |
+| **GeoNLI** | **52.9** | 22.2 | 10.8 | 12.6 | - | **0.897** |
+
+GeoNLI leads on BLEU-1 but trails on BLEU-2 to BLEU-4, which the report attributes to a concise captioning style. CIDEr was not reported for our model.
+
+**Ablations.**
+
+- Removing the CLIP filter dropped IoU by about 12%, mostly from SAM3 segmenting shadows.
+- Fine-tuning the full SAM3 diverged after two epochs; freezing the vision encoder was essential.
+- Cutting the focal loss weight from 20 to 1 made the model ignore small objects entirely.
+- One epoch was best; further training overfit and hurt zero-shot generalisation.
+
+### Demo and UI
+
+A React (Vite) dashboard sits in front of a Flask GPU backend, with a Vercel proxy providing an HTTPS endpoint for judge evaluation. Users upload an image, pick its type (RGB, SAR or FCC) and spatial resolution, generate a caption, or chat with Grounding and VQA toggles to get text answers and OBB overlays. A single `POST /geoNLI/eval` endpoint serves a structured evaluation mode and an interactive mode, and models are pre-loaded at startup.
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">{% include figure.html path="assets/img/projects/geonli/ui.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="The dashboard: image sessions, canvas, grounding, VQA and caption actions." %}</div>
+  <div class="col-sm mt-3 mt-md-0">{% include figure.html path="assets/img/projects/geonli/backend_and_frotend_arch.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="GPU server with a model manager and three pipelines, behind a Vercel proxy." %}</div>
+</div>
+
+**Stack:** Flask, React + Vite, PyTorch, Hugging Face Transformers; Mistral-7B, Qwen3-VL, SAM 3, OpenCLIP, Pix2Pix, Real-ESRGAN.
+
+### Team and links
+
+Team 58, IIT Gandhinagar: Karan Gandhi, Laksh Jain, Romit Mohane, Shreyans Jain (team lead), Umang Shikarvar, Viraj Vekaria.
+
+- [Code on GitHub](https://github.com/Umang-Shikarvar/GeoNLI)

@@ -8,7 +8,16 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: bubbleseg
 ---
+<!-- TODO: verify author list (tex author block is commented out; repo README lists a different set: adds Mihir Agarwal, Muskan Singh, drops Ruchika Dhawan). Publication status not stated in source. -->
+
+<div class="tldr" markdown="1">
+**Problem.** Histotripsy destroys tissue with cavitation bubble clouds, and B-mode ultrasound is the only real-time way to watch it. A prior ResNet-18 model was nearly blind during early treatment: Dice below 20% for fewer than 500 pulses.  
+**Approach.** Treat it as semantic segmentation, train with a combined Dice + Focal loss to handle severe class imbalance, and benchmark six modern architectures on the same data as the prior work.  
+**Result.** EfficientNet-B0 U-Net with Dice-Focal loss reaches mean IoU 0.838 and global accuracy 0.968 (prior: 0.765 / 0.956) with only 7.9M parameters, about 13.5 ms per image on an A100.
+</div>
+
 <!-- TODO: post date is approximate (source tex has no date). -->
 
 Histotripsy is one of the more striking ideas in therapeutic ultrasound. Instead of heating tissue, it fires microsecond pulses with very high peak negative pressure into a target and creates a cloud of cavitation bubbles that mechanically liquefies it. No heat, no ionizing radiation, and no heat-sink problem near blood vessels. The catch is that you need to know what you have destroyed. This post is about the part of that problem I worked on at the MUSE Lab (IIT Gandhinagar): segmenting the ablation zone from B-mode ultrasound, and in particular, why our models first failed exactly when the clinician cares most.
@@ -62,6 +71,8 @@ On the 400 independent test images, the headline comparison is:
 | EfficientNet-B0 + Dice-Focal | 0.968 | 0.838 | 0.939 |
 | DeepLabV3 + Dice-Focal | 0.960 | 0.812 | 0.927 |
 
+{% include figure.html path="assets/img/projects/bubbleseg/fig_qualitative.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Qualitative results across treatment stages (about 100 to about 2000 pulses). The ResNet-18 baseline is noisy and misses the early ablation zone; EfficientNet-B0 and DeepLabV3 with Dice-Focal loss find sparse bubble activity from the start." %}
+
 {% include figure.html path="assets/img/projects/bubbleseg/fig_pulse_dependence.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Dice similarity coefficient versus number of applied pulses. The shaded region is the clinically difficult early stage (under 500 pulses)." %}
 
 The pulse-dependence curve is the one I care about most. With the prior training setup, the baseline sits near zero below 500 pulses. Both EfficientNet-B0 and DeepLabV3 with Dice-Focal loss rise steeply from around 300 pulses and plateau at about 0.83 and 0.88 respectively, versus 0.63 for the baseline.
@@ -91,7 +102,13 @@ The pleasant surprise was efficiency. EfficientNet-B0 U-Net has 7.9M parameters,
 3. Track the physical quantity (here, lesion area) and not only an overlap score.
 4. A 7.9M-parameter model that matches or beats a 58.6M one is the more interesting result for a system that has to run beside a therapy device.
 
+## My role
+
+<!-- TODO: verify role bullets against what Shreyans actually did; derived from repo README (listed contributor) and manuscript. -->
+- First-listed contributor on the repo and manuscript; worked on the six-architecture benchmark and the Combined Dice-Focal loss.
+- Re-implemented the prior ResNet-18 baseline in PyTorch and checked that it closely reproduces the published metrics (global accuracy 0.954 vs 0.956; weighted IoU 0.916 vs 0.916).
+- Worked in the MUSE Lab at IIT Gandhinagar with Prof. Himanshu Shekhar; experimental data came from collaborators at the University of Chicago (Prof. Kenneth Bader).
+
 ## Links
 
-- Project page: [Histotripsy bubble-cloud segmentation]({{ '/projects/bubbleseg/' | relative_url }})
 - Code: [ShreyansJain04/BubbleSegmentation](https://github.com/ShreyansJain04/BubbleSegmentation)

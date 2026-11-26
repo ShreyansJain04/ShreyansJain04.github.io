@@ -8,7 +8,13 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: wavshadow
 ---
+<div class="tldr" markdown="1">
+**Problem.** Shadow segmentation and removal are hard in complex real-world scenes, and existing removal models converge slowly.  
+**Approach.** Improve ShadowFormer with Masked Autoencoder (MAE) priors trained on Places2 and Fast Fourier Convolution (FFC) blocks, add Haar wavelet features for edges and multi-scale analysis, and use a modified SAM Adapter for segmentation.  
+**Result.** State-of-the-art results on the DESOBA dataset with faster convergence and better removal quality. Accepted at ICVGIP 2024.
+</div>
 
 Removing a shadow from a photo sounds like a brightness fix: find the dark region and lighten it. Anyone who has tried knows it isn't. Shadows have soft edges that fade over many pixels, they fall across textures that must survive the fix, and the region under a shadow has lost information that has to be guessed back. Get the mask slightly wrong and you leave a halo. Get the relighting wrong and you leave a patch that's too flat or the wrong colour.
 
@@ -96,4 +102,8 @@ The clearest practical win is **training speed**. With the MAE prior and FFC blo
 
 None of the parts are exotic: a fixed wavelet transform, a pretrained segmenter, a pretrained inpainter, and a convolution with a global receptive field. The lesson for me was about where to put prior knowledge. Each component handles one thing the base model was weak at (sharp edges, region understanding, scene plausibility, global lighting), and together they make a strong model train faster and do better on the hard cases.
 
-**Links:** [Paper (arXiv)](https://arxiv.org/abs/2411.05747) · [Project page](/projects/wavshadow/)
+**Links:** [Paper (arXiv)](https://arxiv.org/abs/2411.05747)
+
+## My role
+
+- First author; all four authors (with Viraj Vekaria, Karan Gandhi and Aadya Arora) contributed equally.

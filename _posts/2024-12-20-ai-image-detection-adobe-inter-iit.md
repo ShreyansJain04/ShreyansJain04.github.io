@@ -8,11 +8,17 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: ai-image-detection
 ---
+<div class="tldr" markdown="1">
+**Problem.** Adobe Research's Inter-IIT 13.0 problem: detect AI-generated images in a 32x32 dataset (CIFAKE plus GAN, diffusion and Adobe Firefly images), then explain *why* an image looks synthetic.  
+**Approach.** A LeViT-192 classifier on Neighboring Pixel Relationship (NPR) features, pretrained on 4M GenImage samples, fine-tuned on CIFAKE with frequency-noise and blur augmentation and focal loss. A zero-shot Ovis 1.6 VLM then names and describes artifacts in flagged images.  
+**Result.** **99.21%** accuracy on CIFAKE (F1 0.9869), the highest accuracy among competing teams. **Silver Medal** at Inter-IIT Tech Meet 13.0, IIT Bombay.
+</div>
 
 Inter-IIT Tech Meet 13.0, held at IIT Bombay, included a computer-vision problem statement from **Adobe Research**: detect AI-generated images, then explain *why* an image looks fake. I led our team (Team 64, IIT Gandhinagar), which I put together from the ML Club, and we won a **Silver Medal** with the highest detection accuracy among all IITs. This post goes through what we built, why each piece was there, and, with some hindsight, which parts held up.
 
-The short version is on the [project page]({{ '/projects/ai-image-detection/' | relative_url }}), and the code is [on GitHub](https://github.com/ShreyansJain04/AI-Image-Detection-Artifact-Identification).
+The code is [on GitHub](https://github.com/ShreyansJain04/AI-Image-Detection-Artifact-Identification).
 
 ## The two tasks, and the catch
 
@@ -126,3 +132,8 @@ The pattern is clear: **when a prompt lists candidate artifacts, the VLM tends t
 ## Takeaway
 
 The detection side taught me that, at tiny resolutions, the right *representation* matters more than model size. NPR targets the one fingerprint every up-sampling generator leaves, and it beat simply scaling the backbone. The explanation side taught me something more uncomfortable: a fluent explanation is not a correct one. If I did it again, I would measure the explainer as carefully as the detector.
+
+## My role
+
+- Team lead: assembled the team from the ML Club, set the technical direction, and built the LeViT + NPR detection framework and the frequency augmentation pipeline.
+- Continued with Adobe Research on out-of-distribution robustness, exploring adversarial training, jigsaw-style self-supervised learning and continual learning.

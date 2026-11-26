@@ -8,7 +8,16 @@ categories: project-writeups
 related_posts: false
 toc:
   sidebar: left
+project: vascflexmap
 ---
+<!-- TODO: verify (1) venue/status: manuscript header is formatted for IEEE Trans. Biomed. Eng. 2025 but no submission status is stated; (2) equal contribution is Dhawan and Agarwal per tex; (3) period; (4) earlier hybrid-attention U-Net abstract (ISTU 2024) numbers 40x / 14.73 dB are on simulated data. No code/paper link available in sources. -->
+
+<div class="tldr" markdown="1">
+**Problem.** Ultrasound localization microscopy (ULM) resolves vessels below 50 um, but needs ultrafast frame rates (about 1000 FPS), tens of thousands of frames, and hours of processing, which clinical scanners cannot provide.  
+**Approach.** Skip bubble localization and tracking. A transformer-decoder network with learned linear projections maps a sparse low-frame-rate (2-50 FPS) contrast-enhanced sequence directly to a vessel probability map, followed by a post-processing enhancement stage.  
+**Result.** On in-vivo rat brain bolus data (PALA), vascular topology is recovered with up to 500x data reduction (341 frames at 2 FPS vs. 170,400 frames for ULM). End-to-end reconstruction takes 28-133 s on an NVIDIA H100. The cost is resolution: vessels appear about 3x wider.
+</div>
+
 <!-- Date approximate: manuscript in preparation, no public preprint. Numbers taken from the project page / manuscript figures. -->
 
 Ultrasound is cheap, portable and safe, but it's blurry. Its resolution is limited by diffraction to roughly half a wavelength, a few hundred microns at clinical frequencies, so the smallest vessels in an organ simply blur together. **Ultrasound localization microscopy (ULM)** gets round this, and resolves vessels below 50 µm. But it asks for things a normal scanner can't give.
@@ -116,4 +125,11 @@ ULM's insight is that you can beat the resolution limit by accumulating many spa
 
 This line of work is also covered by an Indian patent on which I'm an equal first inventor: *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data* (Application No. 202521001823, filed January 2025, published February 2026).
 
-**Links:** [Project page](/projects/vascflexmap/) · Manuscript in preparation
+**Status:** manuscript in preparation.
+
+## My role
+
+- Co-author of the manuscript (equal-contribution first authors are Ruchika Dhawan and Mihir Agarwal).
+- Contributed to the ISTU 2024 hybrid attention-based U-Net on sparse ULM data that preceded this work.
+- Equal first inventor on a published Indian patent from this line of work: *A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data* (Application No. 202521001823, published Feb 2026).
+<!-- TODO: add specific contributions (e.g. preprocessing, experiments, figures) once confirmed. -->

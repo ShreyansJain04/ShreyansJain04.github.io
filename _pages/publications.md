@@ -28,5 +28,5 @@ years: [2026, 2025, 2024]
 
 ## Patents
 
-- **A Real-Time Ultrasound Image Processing System and a Method Thereof**. Indian Patent Application No. 202621026094, filed 5 March 2026, published April 2026. Equal first inventor. Covers real-time suppression of streak artifacts in B-mode ultrasound during therapy. ([project](/projects/streak-suppression/))
-- **A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data**. Indian Patent Application No. 202521001823, filed 8 January 2025, published February 2026. Equal first inventor. ([project](/projects/vascflexmap/))
+- **A Real-Time Ultrasound Image Processing System and a Method Thereof**. Indian Patent Application No. 202621026094, filed 5 March 2026, published April 2026. Equal first inventor. Covers real-time suppression of streak artifacts in B-mode ultrasound during therapy. ([project](/blog/2024/realtime-streak-suppression-ultrasound/))
+- **A System and Method for Super-Resolution Ultrasound Reconstruction with Representation Learning on Sparse Data**. Indian Patent Application No. 202521001823, filed 8 January 2025, published February 2026. Equal first inventor. ([project](/blog/2025/vascflexmap-microvascular-ultrasound/))

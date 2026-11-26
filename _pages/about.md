@@ -34,23 +34,23 @@ proof:
 featured:
   - title: GeoNLI
     blurb: Ask satellite imagery questions in plain English. Led the team to Silver at Inter-IIT 14.0 (ISRO).
-    img: assets/img/projects/geonli/thumb.jpg
-    url: /projects/geonli/
+    img: assets/img/blog/2025/geonli-refine-generate-filter-reason/thumb.jpg
+    url: /blog/2025/geonli-refine-generate-filter-reason/
     tag: Team lead · Silver
   - title: Variational Diffusion Unlearning
     blurb: Erasing classes and styles from a trained diffusion model using only the data to forget.
-    img: assets/img/projects/vdu/thumb.jpg
-    url: /projects/vdu/
+    img: assets/img/blog/2026/variational-diffusion-unlearning/thumb.jpg
+    url: /blog/2026/variational-diffusion-unlearning/
     tag: TMLR 2026
   - title: Real-time streak suppression
     blurb: Removing therapy artifacts from ultrasound at 440+ FPS. Became a patent.
-    img: assets/img/projects/streak-suppression/thumb.jpg
-    url: /projects/streak-suppression/
+    img: assets/img/blog/2024/realtime-streak-suppression-ultrasound/thumb.jpg
+    url: /blog/2024/realtime-streak-suppression-ultrasound/
     tag: Patent · IEEE SAUS
   - title: AI-generated image detection
     blurb: Real or generated? Most accurate detector among 22 IITs, with explanations of the artifacts.
-    img: assets/img/projects/ai-image-detection/thumb.jpg
-    url: /projects/ai-image-detection/
+    img: assets/img/blog/2024/ai-image-detection-adobe-inter-iit/thumb.jpg
+    url: /blog/2024/ai-image-detection-adobe-inter-iit/
     tag: Silver · Adobe
 
 news: true
